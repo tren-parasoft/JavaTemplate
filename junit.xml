@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+   <testsuite name="com.parasoft.another.ConvertorTest"
+               tests="2"
+               id="1"
+               package=""
+               time="0.008"
+               hostname="CD-TREN"
+               timestamp="2024-03-18T14:43:52"
+               failures="0"
+               errors="0">
+      <properties/>
+      <testcase name="convertToString()"
+                 classname="com.parasoft.another.ConvertorTest"
+                 time="0.001"
+                 file="file://CD-TREN/D:/github/JavaTemplate/src/test/java/com/parasoft/another/ConvertorTest.java"/>
+      <testcase name="name()"
+                 classname="com.parasoft.another.ConvertorTest"
+                 time="0.007"
+                 file="file://CD-TREN/D:/github/JavaTemplate/src/test/java/com/parasoft/another/ConvertorTest.java"/>
+      <system-out/>
+      <system-err/>
+   </testsuite>
+   <testsuite name="CalculatorTest"
+               tests="2"
+               id="2"
+               package=""
+               time="0.064"
+               hostname="CD-TREN"
+               timestamp="2024-03-18T14:43:52"
+               failures="0"
+               errors="0">
+      <properties/>
+      <testcase name="testAdd()"
+                 classname="CalculatorTest"
+                 time="0.064"
+                 file="file://CD-TREN/D:/github/JavaTemplate/src/test/java/CalculatorTest.java"/>
+      <testcase name="testMinus()"
+                 classname="CalculatorTest"
+                 time="0.000"
+                 file="file://CD-TREN/D:/github/JavaTemplate/src/test/java/CalculatorTest.java"/>
+      <system-out/>
+      <system-err/>
+   </testsuite>
+   <testsuite name="com.parasoft.ConvertorTest"
+               tests="3"
+               id="3"
+               package=""
+               time="0.006"
+               hostname="CD-TREN"
+               timestamp="2024-03-18T14:43:52"
+               failures="0"
+               errors="0">
+      <properties/>
+      <testcase name="convertToString3()"
+                 classname="com.parasoft.ConvertorTest"
+                 time="0.002"
+                 file="file://CD-TREN/D:/github/JavaTemplate/src/test/java/com/parasoft/ConvertorTest.java"/>
+      <testcase name="convertToString2()"
+                 classname="com.parasoft.ConvertorTest"
+                 time="0.000"
+                 file="file://CD-TREN/D:/github/JavaTemplate/src/test/java/com/parasoft/ConvertorTest.java"/>
+      <testcase name="convertToString1()"
+                 classname="com.parasoft.ConvertorTest"
+                 time="0.004"
+                 file="file://CD-TREN/D:/github/JavaTemplate/src/test/java/com/parasoft/ConvertorTest.java"/>
+      <system-out/>
+      <system-err/>
+   </testsuite>
+   <testsuite name="com.parasoft.nested.PhoneFactoryTest"
+               tests="1"
+               id="4"
+               package=""
+               time="0.007"
+               hostname="CD-TREN"
+               timestamp="2024-03-18T14:43:52"
+               failures="0"
+               errors="0">
+      <properties/>
+      <testcase name="getIphone4()"
+                 classname="com.parasoft.nested.PhoneFactoryTest"
+                 time="0.007"
+                 file="file://CD-TREN/D:/github/JavaTemplate/src/test/java/com/parasoft/nested/PhoneFactoryTest.java"/>
+      <system-out/>
+      <system-err/>
+   </testsuite>
+</testsuites>
