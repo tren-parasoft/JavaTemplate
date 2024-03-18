@@ -15,6 +15,6 @@ class CalculatorTest {
     void testMinus() {
         Calculator calculator = new Calculator();
         int result = calculator.minus(2, 1);
-        assertEquals(2, result);
+        assertEquals(888, result);
     }
 }
