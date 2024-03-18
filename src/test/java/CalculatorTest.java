@@ -8,7 +8,7 @@ class CalculatorTest {
     void testAdd() {
         Calculator calculator = new Calculator();
         int result = calculator.add(1, 2);
-        assertEquals(111111, result);
+        assertEquals(1111111, result);
     }
 
     @Test
