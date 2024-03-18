@@ -11,6 +11,7 @@ jobs:
           files: |
             junit.xml
           test_file_prefix: -file://CD-TREN/D:/github/JavaTemplate/
+          action_fail: true
             
 permissions:
   contents: read
