@@ -9,7 +9,9 @@ jobs:
       - uses: EnricoMi/publish-unit-test-result-action@v2
         with:
           files: |
-            junit.xml
+            junit.xml;
+          test_file_prefix: file://CD-TREN/D:/github/JavaTemplate
+
             
 permissions:
   contents: read
