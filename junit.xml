@@ -34,6 +34,7 @@
       <testcase name="testAdd()"
                  classname="CalculatorTest"
                  time="0.035"
+                 line="8"
                  file="file://CD-TREN/D:/github/JavaTemplate/src/test/java/CalculatorTest.java">
          <failure type="Failure">org.opentest4j.AssertionFailedError: org.opentest4j.AssertionFailedError: expected: &lt;1&gt; but was: &lt;3&gt;
 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
