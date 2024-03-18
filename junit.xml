@@ -13,11 +13,11 @@
       <testcase name="convertToString()"
                  classname="com.parasoft.another.ConvertorTest"
                  time="0.001"
-                 file="file://CD-TREN/D:/github/JavaTemplate/src/test/java/com/parasoft/another/ConvertorTest.java"/>
+                 file="src/test/java/com/parasoft/another/ConvertorTest.java"/>
       <testcase name="name()"
                  classname="com.parasoft.another.ConvertorTest"
                  time="0.004"
-                 file="file://CD-TREN/D:/github/JavaTemplate/src/test/java/com/parasoft/another/ConvertorTest.java"/>
+                 file="src/test/java/com/parasoft/another/ConvertorTest.java"/>
       <system-out/>
       <system-err/>
    </testsuite>
@@ -34,7 +34,7 @@
       <testcase name="testAdd()"
                  classname="CalculatorTest"
                  time="0.035"
-                 file="file://CD-TREN/D:/github/JavaTemplate/src/test/java/CalculatorTest.java">
+                 file="src/test/java/CalculatorTest.java">
          <failure type="Failure">org.opentest4j.AssertionFailedError: org.opentest4j.AssertionFailedError: expected: &lt;1&gt; but was: &lt;3&gt;
 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
@@ -114,7 +114,7 @@
       <testcase name="testMinus()"
                  classname="CalculatorTest"
                  time="0.002"
-                 file="file://CD-TREN/D:/github/JavaTemplate/src/test/java/CalculatorTest.java">
+                 file="src/test/java/CalculatorTest.java">
          <failure type="Failure">org.opentest4j.AssertionFailedError: org.opentest4j.AssertionFailedError: expected: &lt;888&gt; but was: &lt;1&gt;
 	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
 	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
@@ -207,15 +207,15 @@
       <testcase name="convertToString3()"
                  classname="com.parasoft.ConvertorTest"
                  time="0.003"
-                 file="file://CD-TREN/D:/github/JavaTemplate/src/test/java/com/parasoft/ConvertorTest.java"/>
+                 file="src/test/java/com/parasoft/ConvertorTest.java"/>
       <testcase name="convertToString2()"
                  classname="com.parasoft.ConvertorTest"
                  time="0.003"
-                 file="file://CD-TREN/D:/github/JavaTemplate/src/test/java/com/parasoft/ConvertorTest.java"/>
+                 file="src/test/java/com/parasoft/ConvertorTest.java"/>
       <testcase name="convertToString1()"
                  classname="com.parasoft.ConvertorTest"
                  time="0.003"
-                 file="file://CD-TREN/D:/github/JavaTemplate/src/test/java/com/parasoft/ConvertorTest.java"/>
+                 file="src/test/java/com/parasoft/ConvertorTest.java"/>
       <system-out/>
       <system-err/>
    </testsuite>
@@ -232,7 +232,7 @@
       <testcase name="getIphone4()"
                  classname="com.parasoft.nested.PhoneFactoryTest"
                  time="0.008"
-                 file="file://CD-TREN/D:/github/JavaTemplate/src/test/java/com/parasoft/nested/PhoneFactoryTest.java"/>
+                 file="src/test/java/com/parasoft/nested/PhoneFactoryTest.java"/>
       <system-out/>
       <system-err/>
    </testsuite>
