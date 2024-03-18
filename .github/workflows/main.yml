@@ -10,7 +10,6 @@ jobs:
         with:
           files: |
             junit.xml;
-#          test_file_prefix: -file://CD-TREN/D:/github/JavaTemplate
 
             
 permissions:
