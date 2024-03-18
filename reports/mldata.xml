@@ -1,0 +1,90 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<MLearning writerVersion="1.0" toolVer="2022.2.0" execEnv="win32_x86_64" hasViols="true" project="CICD_JavaProjectTemplate" buildId="CICD_JavaProjectTemplate-2023-09-19" climode="true" toolDispName="Jtest" prjModule="com.parasoft:project-with-default-package" toolId="jtest" scBranch="main" machine="CD-TREN" tag="DTP Recommended Rules-com.parasoft:project-with-default-package-main-win32_x86_64" time="2023-09-19T14:48:35+08:00" id="1696385758520" lang="en_US" user="arenc" toolName="DTP Engine for Java">
+  <TestConfig machine="CD-TREN" pseudoUrl="jtest.dtp://DTP Recommended Rules" name="DTP Recommended Rules" user="arenc" />
+  <Analyzers>
+    <Analyzer id="com.parasoft.jtest.flowanalyzer" name="Parasoft Java Flow Analyzer" ver="10.6.1.20221028B3817" />
+    <Analyzer id="com.parasoft.jtest.mlearning" name="machinelearning" ver="10.6.1.20221030" />
+    <Analyzer id="com.parasoft.jtest.globals.ioc.springxml.analyzer.IOCAnalyzer" name="Parasoft IOC Analyzer" ver="10.6.1.20221030" />
+    <Analyzer id="com.parasoft.jtest.standards.checkers.xml" name="Parasoft XML Static Analyzer" ver="10.6.1.20221030" />
+    <Analyzer id="com.parasoft.jtest.standards.checkers.java" name="Parasoft Java Static Analyzer" ver="10.6.1.20221030" />
+    <Analyzer id="com.parasoft.jtest.standards.checkers.prop" name="Parasoft Properties Static Analyzer" ver="10.6.1.20221030" />
+    <Analyzer id="com.parasoft.jtest.standards.metrics.analyzer" name="Parasoft Metrics Analyzer" ver="10.6.1.20221030" />
+    <Analyzer id="com.parasoft.jtest.standards.checkers.rulewizard" name="Parasoft RuleWizard Static Analyzer" ver="10.6.1.20221030" />
+  </Analyzers>
+  <VersionInfos>
+    <StorageInfo resultId="MLData" ver="1" dataVer="1" />
+  </VersionInfos>
+  <Repositories>
+    <Rep type="git" url="git@github.com:parasoft/parasoft-demo-app.git" repRef="1" />
+  </Repositories>
+  <Locations>
+    <Loc locRef="1" projId="com.parasoft:project-with-default-package" scPath="src/main/java/Calculator.java" project="com.parasoft:project-with-default-package" projPath="/com.parasoft:project-with-default-package" branch="main" totLns="27" rev="330c823b10d045b5307308e81e887fbad50ea376" uri="file://CD-TREN/D:/github/JavaProjectTemplate/src/main/java/Calculator.java" resProjPath="src/main/java/Calculator.java" repRef="1" hash="1741334343" />
+    <Loc locRef="2" projId="com.parasoft:project-with-default-package" scPath="src/main/java/com/parasoft/Convertor.java" project="com.parasoft:project-with-default-package" projPath="/com.parasoft:project-with-default-package" branch="main" totLns="14" rev="2fa4c935f38ad72de1990082b59417b1b197f73b" uri="file://CD-TREN/D:/github/JavaProjectTemplate/src/main/java/com/parasoft/Convertor.java" resProjPath="src/main/java/com/parasoft/Convertor.java" repRef="1" hash="-662881149" />
+    <Loc locRef="3" projId="com.parasoft:project-with-default-package" scPath="src/main/java/com/parasoft/another/Convertor.java" project="com.parasoft:project-with-default-package" projPath="/com.parasoft:project-with-default-package" branch="main" totLns="14" rev="2fa4c935f38ad72de1990082b59417b1b197f73b" uri="file://CD-TREN/D:/github/JavaProjectTemplate/src/main/java/com/parasoft/another/Convertor.java" resProjPath="src/main/java/com/parasoft/another/Convertor.java" repRef="1" hash="469181545" />
+    <Loc locRef="4" projId="com.parasoft:project-with-default-package" scPath="src/main/java/com/parasoft/interfaces/IConvertor.java" project="com.parasoft:project-with-default-package" projPath="/com.parasoft:project-with-default-package" branch="main" totLns="5" rev="2fa4c935f38ad72de1990082b59417b1b197f73b" uri="file://CD-TREN/D:/github/JavaProjectTemplate/src/main/java/com/parasoft/interfaces/IConvertor.java" resProjPath="src/main/java/com/parasoft/interfaces/IConvertor.java" repRef="1" hash="-1706285489" />
+    <Loc locRef="5" projId="com.parasoft:project-with-default-package" scPath="src/main/java/com/parasoft/interfaces2/ICalculator.java" project="com.parasoft:project-with-default-package" projPath="/com.parasoft:project-with-default-package" branch="main" totLns="7" rev="330c823b10d045b5307308e81e887fbad50ea376" uri="file://CD-TREN/D:/github/JavaProjectTemplate/src/main/java/com/parasoft/interfaces2/ICalculator.java" resProjPath="src/main/java/com/parasoft/interfaces2/ICalculator.java" repRef="1" hash="1200206342" />
+    <Loc locRef="6" projId="com.parasoft:project-with-default-package" scPath="src/main/java/com/parasoft/nested/PhoneFactory.java" project="com.parasoft:project-with-default-package" projPath="/com.parasoft:project-with-default-package" branch="main" totLns="50" rev="09fea3738404dc10533b81e53283806b17027f4b" uri="file://CD-TREN/D:/github/JavaProjectTemplate/src/main/java/com/parasoft/nested/PhoneFactory.java" resProjPath="src/main/java/com/parasoft/nested/PhoneFactory.java" repRef="1" hash="-1917579824" />
+  </Locations>
+<Values>
+  <MLData method="add(int,int)" module="com.parasoft:project-with-default-package" type="Calculator" locRef="1" startPos="5" endPos="5" endLn="10" startLn="6">
+    <Data id="129" val="3" />
+    <Data id="132" val="1" />
+    <Data id="133" val="1" />
+    <Data id="40" val="1" />
+    <Data id="138" val="1" />
+    <Data id="123" val="1" />
+    <Data id="124" val="1" />
+    <Data id="125" val="1" />
+    <Data id="126" val="1" />
+    <Data id="31" val="1" />
+  </MLData>
+  <MLData method="minus(int,int)" module="com.parasoft:project-with-default-package" ns="com.parasoft.interfaces2" type="ICalculator" locRef="5" startPos="5" endPos="5" endLn="6" startLn="4">
+    <Data id="40" val="1" />
+    <Data id="129" val="1" />
+    <Data id="139" val="1" />
+    <Data id="125" val="1" />
+    <Data id="126" val="1" />
+  </MLData>
+  <MLData method="getIphone4()" module="com.parasoft:project-with-default-package" ns="com.parasoft.nested" type="PhoneFactory" locRef="6" startPos="5" endPos="5" endLn="10" startLn="8">
+    <Data id="129" val="1" />
+    <Data id="130" val="1" />
+    <Data id="35" val="1" />
+    <Data id="40" val="1" />
+    <Data id="200" val="1" />
+    <Data id="123" val="1" />
+    <Data id="124" val="1" />
+    <Data id="125" val="1" />
+    <Data id="126" val="1" />
+  </MLData>
+  <MLData method="name()" module="com.parasoft:project-with-default-package" ns="com.parasoft.interfaces" type="IConvertor" ln="4" locRef="4" startPos="5" endPos="18" />
+  <MLData method="convertToString(int)" module="com.parasoft:project-with-default-package" ns="com.parasoft.another" type="Convertor" locRef="3" startPos="5" endPos="5" endLn="8" startLn="6">
+    <Data id="129" val="1" />
+    <Data id="40" val="1" />
+    <Data id="200" val="1" />
+    <Data id="138" val="1" />
+    <Data id="125" val="1" />
+    <Data id="126" val="1" />
+  </MLData>
+  <MLData method="name()" module="com.parasoft:project-with-default-package" ns="com.parasoft.another" type="Convertor" locRef="3" startPos="5" endPos="5" endLn="13" startLn="10">
+    <Data id="40" val="1" />
+    <Data id="200" val="1" />
+    <Data id="129" val="1" />
+    <Data id="125" val="1" />
+    <Data id="126" val="1" />
+  </MLData>
+  <MLData method="convertToString(int)" module="com.parasoft:project-with-default-package" ns="com.parasoft" type="Convertor" locRef="2" startPos="5" endPos="5" endLn="8" startLn="6">
+    <Data id="129" val="1" />
+    <Data id="40" val="1" />
+    <Data id="200" val="1" />
+    <Data id="138" val="1" />
+    <Data id="125" val="1" />
+    <Data id="126" val="1" />
+  </MLData>
+  <MLData method="name()" module="com.parasoft:project-with-default-package" ns="com.parasoft" type="Convertor" locRef="2" startPos="5" endPos="5" endLn="13" startLn="10">
+    <Data id="40" val="1" />
+    <Data id="200" val="1" />
+    <Data id="129" val="1" />
+    <Data id="125" val="1" />
+    <Data id="126" val="1" />
+  </MLData>
+</Values></MLearning>

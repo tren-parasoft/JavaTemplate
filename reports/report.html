@@ -1,0 +1,3483 @@
+<html xmlns:graph="graph" xmlns:results="results">
+<head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   <style type="text/css">
+    BODY,P,OL,TD,pre{font-family: Arial, Helvetica, sans-serif;font-size: 12px;font-style: normal;color: #000000;}
+    .textArea {width:99%; height: 235px; padding:0.5%; resize: none; border:1px; border-style: solid; border-color: #CBCBCB; outline: none; overflow:auto;}
+
+    A:link {font-family: Arial, Helvetica, sans-serif;font-style: normal;color: #990000;text-decoration: none;}
+    A:active {font-family: Arial, Helvetica, sans-serif;font-style: normal;color: #990000;text-decoration: none;}
+    A:visited {font-family: Arial, Helvetica, sans-serif;font-style: normal;color: #999999;text-decoration: none;}
+    A:hover {font-family: Arial, Helvetica, sans-serif;font-style: normal;color: #990000;text-decoration: underline;}
+    A.gray_link:link {font-family: Arial;font-size: 12px;color: #666666;text-decoration: none;}
+    A.gray_link:active {font-family: Arial;font-size: 12px;color: #666666;text-decoration: none;}
+    A.gray_link:visited {font-family: Arial;font-size: 12px;color: #666666;text-decoration: none;}
+    A.gray_link:hover {font-family: Arial;font-size: 12px;color: #666666;text-decoration: underline;}
+    A.red_link:link {font-family: Arial;font-size: 12px;color: #990000;text-decoration: none;}
+    A.red_link:active {font-family: Arial;font-size: 12px;color: #990000;text-decoration: none;}
+    A.red_link:visited {font-family: Arial;font-size: 12px;color: #990000;text-decoration: none;}
+    A.red_link:hover {font-family: Arial;font-size: 12px;color: #990000;text-decoration: underline;}
+    A.green_link:link {font-family: Arial;font-size: 12px;color: #008040;text-decoration: none;}
+    A.green_link:active {font-family: Arial;font-size: 12px;color: #008040;text-decoration: none;}
+    A.green_link:visited {font-family: Arial;font-size: 12px;color: #008040;text-decoration: none;}
+    A.green_link:hover {font-family: Arial;font-size: 12px;color: #008040;text-decoration: underline;}
+    A.black_link:link {font-family: Arial;font-size: 12px;color: #000000;text-decoration: none;}
+    A.black_link:active {font-family: Arial;font-size: 12px;color: #000000;text-decoration: none;}
+    A.black_link:visited {font-family: Arial;font-size: 12px;color: #000000;text-decoration: none;}
+    A.black_link:hover {font-family: Arial;font-size: 12px;color: #000000;text-decoration: underline;}
+
+    A.blue_link:link {font-family: Arial;font-size: 12px;color: #0093D2;text-decoration: none;}
+    A.blue_link:active {font-family: Arial;font-size: 12px;color: #0093D2;text-decoration: none;}
+    A.blue_link:visited {font-family: Arial;font-size: 12px;color: #0093D2;text-decoration: none;}
+    A.blue_link:hover {font-family: Arial;font-size: 12px;color: #0093D2;text-decoration: underline;}
+
+    A.gray_red_link:link {font-family: Arial;font-size: 12px;color: #666666;text-decoration: none;}
+    A.gray_red_link:active {font-family: Arial;font-size: 12px;color: #666666;text-decoration: none;}
+    A.gray_red_link:visited {font-family: Arial;font-size: 12px;color: #666666;text-decoration: none;}
+    A.gray_red_link:hover {font-family: Arial;font-size: 12px;color: #666666;text-decoration: none;}
+    DIV.suite_details{background:#EDEDED;padding:8px}
+
+    DIV.test_comment{color:#666666;}
+
+    DIV.arr_right
+    {
+        position: relative;
+        left: +1px;
+        top: +3px;
+        height: 0px;
+        width: 0;
+        border-left: 5px solid #FFFFFF;
+        border-right: 5px solid transparent;
+        border-top: 5px solid transparent;
+        border-bottom: 5px solid transparent;
+    }
+    DIV.arr_down
+    {
+        position: relative;
+        left: -3px;
+        top: +5px;
+        height: 0px;
+        width: 0;
+        border-top: 5px solid #FFFFFF;
+        border-right: 5px solid transparent;
+        border-left: 5px solid transparent;
+        border-bottom: 5px solid transparent;
+       }
+
+    TABLE.main_header_top {
+         padding: 10px;
+         background: #333333;
+         border-spacing: 0px;
+    }
+
+    TABLE.main_header {
+         padding-top:2px;
+         padding-bottom:1px;
+         background: #006699;
+         text-align: center;
+    }
+
+    FONT.main_header {
+         font-size: 28px;
+         font-family: Arial, Helvetica, sans-serif;
+         color: #FFFFFF;
+    }
+
+    TABLE.main_header_small {
+         padding-top:1px;
+         padding-bottom:2px;
+         background: #006699;
+         text-align:center;
+    }
+
+    TABLE.header_separator {
+         padding-top:1px;
+         padding-bottom:2px;
+         background: #CCCCCC;
+         text-align:center;
+    }
+
+    FONT.main_header_small {
+         font-size: 12px;
+         font-family: Arial, Helvetica, sans-serif;
+         color: #FFFFFF;
+    }
+    
+    DIV.section_header { 
+         padding: 8px; 
+         color: #FFFFFF; 
+         font-size: 14px;
+         font-family: Arial, Helvetica, sans-serif;
+         background: #004877;
+    }
+
+    TABLE.section_header { 
+         padding: 8px; 
+         color: #FFFFFF; 
+         font-size: 14px;
+         font-family: Arial, Helvetica, sans-serif;
+         background: #004877;
+    }
+
+    DIV.header{ padding-top: 10px; font-size: 32px; FONT-FAMILY: Arial, sans-serif; COLOR:#000000 }
+    DIV.small_header{ padding-top: 5px; padding-bottom: 5px; font-size: 28px; FONT-FAMILY: Arial, Helvetica, sans-serif; COLOR: #000000 }
+    FONT.title{font-size: 14px; FONT-FAMILY: Arial, Helvetica, sans-serif; COLOR: #000000 }
+    FONT.gray {font-size: 12px;font-family: Arial, Helvetica, sans-serif;color: #999999;}    
+    FONT.gray2, FONT.gray_red {font-size: 12px;font-family: Arial, Helvetica, sans-serif;color: #666666;}
+    FONT.white {font-size: 12px;font-family: Arial, Helvetica, sans-serif;color: #FFFFFF;}
+    FONT.time {font-size: 11px;font-family: Arial, Helvetica, sans-serif;color: #000000;}
+    FONT.black {font-family: Arial, Helvetica, sans-serif;font-size: 12px;font-style: normal;color: #000000;}
+    FONT.red {font-size: 12px;font-family: Arial, Helvetica, sans-serif;color: #990000;}
+    FONT.red2 {font-size: 12px;font-family: Arial, Helvetica, sans-serif;color: #990000; text-decoration: underline;}
+    FONT.blue {font-size: 12px;font-family: Arial, Helvetica, sans-serif;color: #427fb6;}
+    FONT.green {font-size: 12px;font-family: Arial, Helvetica, sans-serif;color: #008040;}
+    FONT.orange {font-size: 12px;font-family: Arial, Helvetica, sans-serif;color: #F69500;}
+    FONT.goldenrod {font-size: 12px;font-family: Arial, Helvetica, sans-serif;color: #DAA520;}    
+    FONT.small {font-size: 3px;font-family: Arial, Helvetica, sans-serif;color: #cccccc;}
+    IMG.screenshot{float:left; margin-right: 20px; }
+    SELECT.cs_authors {font-family: Arial, Helvetica, sans-serif;font-size: 12px;}  
+    SELECT.ju_authors {font-family: Arial, Helvetica, sans-serif;font-size: 12px;}  
+    SPAN.toggle_button{width: 16px; padding-right: 2px; display: inline-block;cursor: pointer;} 
+    TD.associations{vertical-align: top;}
+    TD.collapse_controls{text-align:right;}
+    TD.cs_authors{font-family: Arial, Helvetica, sans-serif;font-size: 12px;font-style: normal;color: #000000;border: 1px; bordercolor: #d9c8ac;}
+    TD.error{background-color:#F2C6C5}
+    TD.errorsingleborder{ padding:8px; background-color:#F2C6C5;}
+
+    TD.summary_cell { padding: 5px; padding-left: 20px; color: #000000; font-size: 13px; font-family: Arial, Helvetica, sans-serif; background: #EDEDED }
+    TD.summary_stats_cell { padding: 5px; padding-left: 20px; color: #000000; font-size: 14px; font-family: Arial, Helvetica, sans-serif; background: #FFFFFF }
+    TABLE.summary_stats_cell { border: 1px solid #000000 }
+
+    TD.section_header
+    {
+        padding: 0px;
+        color:#FFFFFF; 
+        background-color:#004877;
+        font-size: 14px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    TD.header_separator
+    {
+        padding: 0px;
+        color:#FFFFFF; 
+        background-color: #CCCCCC;
+    }
+
+    TD.testSuiteTree {padding-top:4px;padding-bottom:4px;}
+    TD.singleborder{ padding:8px;}
+    TD.right_separator{ border-right:1px #FFFFFF solid}
+    TD.left_separator{ border-left:1px #FFFFFF solid}
+    TD.left_separator_gray{ border-left:1px #ceced2 solid}
+    TD.right_separator_gray{ border-right:1px #ceced2 solid}
+    TD.top_separator_gray{ border-top:1px #ceced2 solid}
+    TD.bottom_separator_gray{ border-bottom:1px #ceced2 solid}
+    TABLE.header{background-color:#FFFFFF}
+    TABLE.singleborder{}
+    TABLE.doubleborder{}
+    TABLE.singleborder_blue{}
+    TABLE.singleborder_main{}
+    TD.fixed_width{width: 150px;}
+    TD.no_error{}
+    TD.suite_details{padding-top:2px; padding-bottom:2px }
+    UL.metrics {font-family: Arial, Helvetica, sans-serif;font-size: 12px;font-style: normal;color: #000000; list-style-type: none; margin: 0; padding-left:12px;}
+    UL.root {font-family: Arial, Helvetica, sans-serif;font-size: 12px;font-style: normal;color: #000000; list-style-type: none; margin: 0; padding-left:0px; margin-left:3px;}
+    UL {font-family: Arial, Helvetica, sans-serif;font-size: 12px;font-style: normal;color: #000000; list-style-type: none; margin: 0; padding-left:0px; margin-left:12px;}
+    LI.tree {padding-top:2px; padding-bottom:2px; font-family: Arial, Helvetica, sans-serif;font-size: 12px;font-style: normal;color: #000000; list-style-type: none; margin: 0; padding-left: 0px;}
+
+    LI.root { 
+        margin: 0;
+        padding-left: 0px;
+        padding-top:8px;
+        padding-bottom:8px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 12px;
+        font-style: normal;
+        color: #000000; 
+        list-style-type: none;
+        
+            background-color: #CCCCCC; 
+        
+    }
+
+    TD.root {
+        padding-top:8px;
+        padding-bottom:8px;
+        
+            background-color: #CCCCCC; 
+         
+    }
+    TD.tree { padding-top:2px; padding-bottom:2px;}
+
+    PRE.tree { line-height: 16px; margin:0px; }
+
+    tr.alternated { background-color: #EDEDED }
+    tr.alternating:nth-child(even) { background-color: #EDEDED }
+    li.alternating:nth-child(even) { background-color: #EDEDED }
+
+    tr.errorsingleborder:nth-child(even) { background-color: #F2C6C5 }
+    tr.errorsingleborder:nth-child(odd)  { background-color: #F7D3D2 }
+    tr.no_errorsingleborder { }
+    
+    #foldheader{cursor:pointer;cursor:hand ;}
+    #cs_foldheader{cursor:pointer;cursor:hand ;}
+    #cr_foldheader{cursor:pointer;cursor:hand ;}
+    #metrics_foldheader{cursor:pointer;cursor:hand ;}
+    #exec_foldheader{cursor:pointer;cursor:hand ;}
+    #paramsHeader {word-break:break-all;overflow: auto; padding: 3px;}
+    </style><title>Jtest&nbsp;Report&nbsp;[2023-09-19T14:48:35+08:00]
+
+</title><script language="JavaScript">
+    var nwin;
+    function openWin (loc_to_open) {
+       if (!nwin || nwin.closed) {
+          nwin = window.open(loc_to_open,'');
+       } else {
+          nwin.location = loc_to_open;
+       }
+       nwin.focus();
+    }
+    function openDevReport (dev_rep_name) {
+       openWin(dev_rep_name);
+    }
+    </script><script language="JavaScript">
+    function sortBySeverity(urgent){
+    if(urgent != null)  {
+        sev=document.getElementById("cs_sevtrue");
+        sev_link=document.getElementById("cs_link_sevtrue");
+        sev_title=document.getElementById("cs_title_sevtrue");
+    } else {
+        sev=document.getElementById("cs_sev");
+        sev_link=document.getElementById("cs_link_sev");
+        sev_title=document.getElementById("cs_title_sev");
+    }
+    if(sev != null) sev.style.display='block';
+    if(sev_title != null) sev_title.style.display='block';
+    if(sev_link != null) {
+       sev_link.className="gray_red_link";
+    }
+    if(urgent != null)  {
+        cat=document.getElementById("cs_cattrue");
+        cat_link=document.getElementById("cs_link_cattrue");
+        cat_title=document.getElementById("cs_title_cattrue");
+    } else {
+        cat=document.getElementById("cs_cat");
+        cat_link=document.getElementById("cs_link_cat");
+        cat_title=document.getElementById("cs_title_cat");
+    }
+    if(cat != null) cat.style.display='none';
+    if(cat_title != null) cat_title.style.display='none';
+    if(cat_link != null) {
+       cat_link.className="blue_link";
+    }
+    }
+
+    function sortByCategory(urgent){
+    if(urgent != null)  {
+        sev=document.getElementById("cs_sevtrue");
+        sev_link=document.getElementById("cs_link_sevtrue");
+        sev_title=document.getElementById("cs_title_sevtrue");
+    } else {
+        sev=document.getElementById("cs_sev");
+        sev_link=document.getElementById("cs_link_sev");
+        sev_title=document.getElementById("cs_title_sev");
+    }
+    if(sev != null) sev.style.display='none';
+    if(sev_title != null) sev_title.style.display='none';
+    if(sev_link != null) { 
+        sev_link.className="blue_link";
+    }       
+    if(urgent != null)  {
+        cat=document.getElementById("cs_cattrue");
+        cat_link=document.getElementById("cs_link_cattrue");
+        cat_title=document.getElementById("cs_title_cattrue");
+    } else {
+        cat=document.getElementById("cs_cat");
+        cat_link=document.getElementById("cs_link_cat");
+        cat_title=document.getElementById("cs_title_cat");
+    }
+    if(cat != null) cat.style.display='block';
+    if(cat_title != null) cat_title.style.display='block';
+    if(cat_link != null) { 
+        cat_link.className="gray_red_link";
+    }
+    }
+    </script><script language="JavaScript">
+    var ns6=document.getElementById && !document.all
+    var ie4=document.all && navigator.userAgent.indexOf("Opera")==-1
+
+    function checkcontained(e)
+    {
+       cur=ns6 ? e.target : event.srcElement;
+
+       checkFor("foldinglist", "foldheader", cur);
+       checkFor("cs_foldinglist", "cs_foldheader", cur);
+       checkFor("cr_foldinglist", "cr_foldheader", cur);
+       checkFor("metrics_foldinglist", "metrics_foldheader", cur);
+       checkFor("exec_foldinglist", "exec_foldheader", cur);
+    }
+
+    function toggleDiv(divSectionId)
+    {
+        var divArrowId = divSectionId + "_arrow";
+        if (document.getElementById(divSectionId).style.display == "none") {
+            document.getElementById(divSectionId).style.display = "";
+            document.getElementById(divArrowId).className="arr_down";
+        } else {
+            document.getElementById(divSectionId).style.display = "none";
+            document.getElementById(divArrowId).className="arr_right";
+        }
+    }
+
+    function checkFor(foldinglist, foldheader, cur)
+    {
+        var iscontained=0;
+        i = 0;
+        if (cur.id==foldheader) {
+           iscontained=1;
+        } 
+        while (ns6 && cur.parentNode || (ie4 && cur.parentElement)) {
+             if (cur.id==foldheader||cur.id==foldinglist){
+                iscontained=(cur.id==foldheader)? 1 : 0;
+                break;
+             }
+             cur=ns6? cur.parentNode : cur.parentElement;
+        }
+
+        if (iscontained) {
+           var foldercontent=ns6? cur.nextSibling.nextSibling : cur['nextSibling'];
+           if (foldercontent.style.display=="none"){
+               foldercontent.style.display="";
+           } else {
+               foldercontent.style.display="none";
+           }
+        }
+    }
+    function expandCSDetails() {
+       expandCollapseAll("cs_foldinglist", true);
+    }
+
+    function collapseCSDetails() {
+       expandCollapseAll("cs_foldinglist", false);
+    }
+
+    function expandCRDetails() {
+    expandCollapseAll("cr_foldinglist", true);
+    }
+
+    function collapseCRDetails() {
+    expandCollapseAll("cr_foldinglist", false);
+    }
+
+    function expandMetricsDetails() {
+    expandCollapseAll("metrics_foldinglist", true);
+    }
+
+    function collapseMetricsDetails() {
+    expandCollapseAll("metrics_foldinglist", false);
+    }
+
+    function expandExecDetails() {
+       expandCollapseAll("exec_foldinglist", true);
+    }
+
+    function collapseExecDetails() {
+       expandCollapseAll("exec_foldinglist", false);
+    }
+
+    function expandCvgDetails() {
+       expandCollapseAll("cvg_foldinglist", true);
+    }
+
+    function collapseCvgDetails() {
+       expandCollapseAll("cvg_foldinglist", false);
+    }
+
+    function expandCollapseAll(foldinglistID, collapse)
+    {
+        if (document.getElementById && document.createElement) {
+            m = document.getElementById(foldinglistID).getElementsByTagName('ul');
+            var i;
+            for (i = 0; i < m.length; i++) {
+              if (collapse) {
+                 m[i].style.display='block';
+              } else {
+                 m[i].style.display='none';
+              }
+            }
+        }
+    }
+
+    function expandViolaion(headerID, violationID, startIndex)
+    {
+        var violation = document.getElementById(violationID);
+        var m = document.getElementById(headerID).getElementsByTagName('td');
+        
+        if (violation.style.display === '') {
+            violation.style.display = 'none';
+            for (i = startIndex; i < m.length; i++) {
+                m[i].style.backgroundColor = "#FFFFFF";
+            }
+        }
+        else{
+            violation.style.display = '';
+            for (i = startIndex; i < m.length; i++) {
+                m[i].style.backgroundColor = "#E0E0E0";
+            }        
+        }
+    }
+
+    if (ie4||ns6) {
+       document.onclick=checkcontained;
+    }
+    </script></head>
+<body bgcolor="#FFFFFF" style="margin:0;padding:0">
+<table class="singleborder_main" width="100%" cellpadding="0" cellspacing="0">
+<tr>
+<td>
+<table xmlns:textutil="textutil" xmlns:authors="authors" width="100%" class="main_header_top">
+<tr></tr>
+</table>
+<table xmlns:textutil="textutil" xmlns:authors="authors" width="100%" class="main_header">
+<tr>
+<td width="20%" align="left" class="main_header"><img src="rep_header_logo_x10.png"></td>
+<td width="60%" class="main_header">
+<table width="100%" cellpadding="0" cellspacing="0">
+<tr>
+<td class="main_header">
+<table width="100%" class="main_header">
+<tr>
+<td align="center" class="main_header"><font class="main_header">Parasoft&nbsp;Jtest&nbsp;Report</font></td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table width="100%" class="main_header_small">
+<tr>
+<td align="center" class="main_header_small"><font class="main_header_small">Jtest&nbsp;2022.2.0</font></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+<td width="20%" class="main_header"></td>
+</tr>
+</table><br xmlns:textutil="textutil" xmlns:authors="authors"><table width="100%" style="padding-bottom:10px;padding-top:0px" cellspacing="0">
+<tr>
+<td align="center">
+<table width="100%" class="singleborder_blue" style="padding-left:25px;padding-right:25px;padding-bottom:25px;padding-top:5px" cellspacing="0" bgcolor="#FFFFFF">
+<tr>
+<td>
+<table width="100%" cellpadding="0" cellspacing="0">
+<tr>
+<td colspan="2">
+<table width="100%" cellpadding="0" cellspacing="0" class="section_header">
+<tr>
+<td>
+<table width="100%" cellpadding="0" cellspacing="0">
+<tr>
+<td class="section_header">Session Summary</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td class="summary_cell">
+<table width="100%" cellpadding="0" cellspacing="0">
+<tr>
+<td width="20%" class="summary_cell" style="white-space: nowrap; vertical-align: baseline;"><b>Build ID:</b></td>
+<td class="summary_cell" style="word-break: break-word;">CICD_JavaProjectTemplate-2023-09-19</td>
+</tr>
+<tr>
+<td class="summary_cell" style="white-space: nowrap; vertical-align: baseline;"><b>Test Configuration:</b></td>
+<td class="summary_cell" style="word-break: break-word;">jtest.dtp://DTP Recommended Rules</td>
+</tr>
+<tr>
+<td class="summary_cell" style="white-space: nowrap; vertical-align: baseline;"><b>Started:</b></td>
+<td class="summary_cell">2023-09-19T14:48:35+08:00</td>
+</tr>
+<tr>
+<td class="summary_cell" style="white-space: nowrap; vertical-align: baseline;"><b>Performed on:</b></td>
+<td class="summary_cell">CD-TREN by arenc</td>
+</tr>
+<tr>
+<td class="summary_cell" style="white-space: nowrap; vertical-align: baseline;"><b>Session Tag:</b></td>
+<td class="summary_cell" style="word-break: break-word;">DTP Recommended Rules-com.parasoft:project-with-default-package-main-win32_x86_64</td>
+</tr>
+<tr>
+<td class="summary_cell" style="white-space: nowrap; vertical-align: baseline;"><b>Project:</b></td>
+<td class="summary_cell">CICD_JavaProjectTemplate</td>
+</tr>
+</table>
+</td>
+<td class="summary_cell" align="right" valign="top" style="padding-right:60px;"><br><table width="400px" class="summary_stats_cell" cellpadding="0" bgcolor="#FFFFFF" cellspacing="0">
+<tr>
+<td>
+<table width="100%" cellpadding="0" bgcolor="#FFFFFF" cellspacing="0">
+<tr>
+<td class="summary_stats_cell"><a xmlns:textutil="textutil" xmlns:authors="authors" class="blue_link" style="font-size: 14px" href="#cs"><b>Static Analysis</b></a></td>
+<td class="summary_stats_cell">Severity 1 Findings: 0</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table><a xmlns:textutil="textutil" xmlns:authors="authors" name="cs"></a>&nbsp;
+<table xmlns:textutil="textutil" xmlns:authors="authors" width="100%" cellpadding="0" cellspacing="0" class="section_header">
+<tr>
+<td>
+<table cellpadding="0" cellspacing="0">
+<tr>
+<td class="section_header">Summary - Static Analysis</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table xmlns:textutil="textutil" xmlns:authors="authors" width="100%" cellpadding="2" cellspacing="0">
+<tr>
+<td align="center"><img src="standard_summary_09-19-23_14-48-35.jpeg" alt="standard_summary_09-19-23_14-48-35.jpeg"></td>
+</tr>
+</table>&nbsp;
+<table xmlns:textutil="textutil" xmlns:authors="authors" width="100%" cellpadding="0" cellspacing="0" class="section_header" onclick="javascript:toggleDiv('cs_details_section')">
+<tr>
+<td>
+<table cellpadding="0" cellspacing="0">
+<tr cols="2">
+<td class="section_header" valign="top">
+<div style="display:table-cell" class="arr_down" id="cs_details_section_arrow"><span style="zoom:1;"></span></div>
+</td>
+<td class="section_header">Details - Static Analysis</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<div xmlns:textutil="textutil" id="cs_details_section">
+<table class="header" width="100%" cellpadding="0" cellspacing="0">
+<tr>
+<td width="15%"></td>
+<td align="center">
+<div class="header">Static Analysis</div>
+</td>
+<td width="15%" align="right" valign="bottom"></td>
+</tr>
+</table><br><table width="100%" cellpadding="0" cellspacing="0">
+<tr>
+<td width="80%">
+<table width="100%" class="singleborder" cellpadding="0" cellspacing="0">
+<tr>
+<td class="singleborder right_separator" width="40%" align="center" bgcolor="#CCCCCC"><b>Module</b>&nbsp;
+</td>
+<td class="singleborder  right_separator" align="center" bgcolor="#CCCCCC" colspan="3">&nbsp;<b>Findings</b>&nbsp;
+</td>
+<td class="singleborder right_separator" align="center" bgcolor="#CCCCCC" colspan="2">&nbsp;<b>Files</b></td>
+<td class="singleborder" align="center" bgcolor="#CCCCCC" colspan="2">&nbsp;<b>Lines</b></td>
+</tr>
+<tr>
+<td class="singleborder right_separator" align="center" bgcolor="#CCCCCC"><span style="zoom:1;"></span></td>
+<td class="singleborder" align="center" bgcolor="#CCCCCC">suppressed</td>
+<td class="singleborder" align="center" bgcolor="#CCCCCC">total</td>
+<td class="singleborder right_separator" align="center" bgcolor="#CCCCCC">per 10,000 lines</td>
+<td class="singleborder" align="center" bgcolor="#CCCCCC">checked</td>
+<td class="singleborder right_separator" align="center" bgcolor="#CCCCCC">total</td>
+<td class="singleborder" align="center" bgcolor="#CCCCCC">checked</td>
+<td class="singleborder" align="center" bgcolor="#CCCCCC">total</td>
+</tr>
+<tr class="alternating">
+<td class="singleborder right_separator" align="left">&nbsp;com.parasoft:project-with-default-package</td>
+<td class="singleborder" align="center">&nbsp;0&nbsp;</td>
+<td class="singleborder" align="center">1&nbsp;</td>
+<td class="singleborder right_separator" align="center">85&nbsp;</td>
+<td class="singleborder" align="center">&nbsp;6&nbsp;</td>
+<td class="singleborder  right_separator" align="center">6&nbsp;</td>
+<td class="singleborder" align="center">&nbsp;117&nbsp;</td>
+<td class="singleborder" align="center">117&nbsp;</td>
+</tr>
+<tr>
+<td class="singleborder  right_separator" align="left" bgcolor="#CCCCCC">&nbsp;<b>Total</b> [0:00:03]
+
+</td>
+<td class="singleborder" align="center" bgcolor="#CCCCCC">&nbsp;<b>0</b>&nbsp;
+</td>
+<td class="singleborder" align="center" bgcolor="#CCCCCC">&nbsp;<b>1</b>&nbsp;
+</td>
+<td class="singleborder right_separator" align="center" bgcolor="#CCCCCC">&nbsp;<b>85</b>&nbsp;
+</td>
+<td class="singleborder" align="center" bgcolor="#CCCCCC"><b>6</b>&nbsp;
+</td>
+<td class="singleborder right_separator" align="center" bgcolor="#CCCCCC"><b>6</b>&nbsp;
+</td>
+<td class="singleborder" align="center" bgcolor="#CCCCCC"><b>117</b>&nbsp;
+</td>
+<td class="singleborder" align="center" bgcolor="#CCCCCC"><b>117</b>&nbsp;
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table><br><table width="100%" cellpadding="0" cellspacing="0">
+<tr>
+<td>
+<table width="100%" cellpadding="0" cellspacing="0">
+<tr>
+<td>
+<table class="header" width="100%" cellpadding="0" cellspacing="0">
+<tr>
+<td width="30%">&nbsp;</td>
+<td align="center">
+<div class="small_header" id="cs_title_cat" style="display:block;">All Findings&nbsp;by Category</div>
+<div class="small_header" id="cs_title_sev" style="display:none;">All Findings&nbsp;by Severity</div>
+</td>
+<td align="right" width="30%"><a xmlns:authors="authors" id="cs_link_cat" class="blue_link" href="javascript:sortByCategory()">Category</a>&nbsp;
+|
+&nbsp;<a xmlns:authors="authors" id="cs_link_sev" class="blue_link" href="javascript:sortBySeverity()">Severity</a>&nbsp;&nbsp;&nbsp;
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table xmlns:authors="authors" width="100%" class="header_separator" cellspacing="0" cellpadding="0">
+<tr>
+<td align="center" class="header_separator"></td>
+</tr>
+</table><br xmlns:authors="authors"></td>
+</tr>
+<tr>
+<td align="left">
+<div id="cs_cat" style="display:block;">
+<table width="100%" class="doubleborder" cellpadding="0" cellspacing="0">
+<tr>
+<td class="tree">&nbsp;
+[<b>1</b>]
+&nbsp;&nbsp;<b>Organization</b>&nbsp;<font class="gray">(CODSTA.ORG)</font>&nbsp;
+</td>
+</tr>
+<tr>
+<td class="tree_node">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+[<b>1</b>]
+&nbsp;&nbsp;Ensure all types have a non default package name&nbsp;<font class="gray">(CODSTA.ORG.UNDPN-3)</font>&nbsp;
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+<tr>
+<td align="left">
+<div id="cs_sev" style="display:none;">
+<table width="100%" class="doubleborder" cellpadding="0" cellspacing="0">
+<tr>
+<td class="tree">&nbsp;
+[<b>1</b>]
+&nbsp;&nbsp;<b>Severity&nbsp;3 - Medium</b></td>
+</tr>
+<tr>
+<td class="tree_node">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+[<b>1</b>]
+&nbsp;&nbsp;Ensure all types have a non default package name&nbsp;<font class="gray">(CODSTA.ORG.UNDPN-3)</font>&nbsp;
+</td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table><br><table xmlns:authors="authors" width="100%" cellpadding="0" cellspacing="0">
+<tr>
+<td width="20%"></td>
+<td width="60%" align="center">
+<div class="small_header">Findings by Author</div>
+</td>
+<td width="20%" align="right"><a class="blue_link" href="#top">Back to Top </a>&nbsp;&nbsp;&nbsp;
+</td>
+</tr>
+</table>
+<table align="center" class="singleborder" width="100%" cellpadding="0" cellspacing="0">
+<tr bgcolor="#CCCCCC">
+<td class="singleborder right_separator" width="50%" align="center"><b>Author</b>&nbsp;
+</td>
+<td class="singleborder" colspan="3" align="center"><b>Findings</b></td>
+</tr>
+<tr bgcolor="#CCCCCC">
+<td class="singleborder right_separator" align="center"><span style="zoom:1;"></span></td>
+<td class="singleborder" align="center">suppressed</td>
+<td class="singleborder" align="center">total</td>
+<td class="singleborder" align="center">recommended</td>
+</tr>
+<tr class="alternating">
+<td class="singleborder right_separator" align="left">&nbsp;<a xmlns:authors="authors" class="blue_link" href="javascript:openWin(&#34;report_dev1.html#cst_dev1&#34;)">Roller Wang</a>&nbsp;
+</td>
+<td class="singleborder" align="center">&nbsp;0&nbsp;</td>
+<td class="singleborder" align="center">&nbsp;1&nbsp;</td>
+<td class="singleborder" align="center">&nbsp;1&nbsp;</td>
+</tr>
+</table><br><table width="100%" cellpadding="0" cellspacing="0">
+<tr>
+<td xmlns:authors="authors" style="padding-left:20px;" colspan="2" align="left" nowrap class="tree"><a name="cs_dev1"></a><b>Roller Wang</b>&nbsp;&nbsp;Total Findings
+:
+&nbsp;1
+</td>
+<td xmlns:authors="authors" align="right" class="tree"><a class="blue_link" href="#top">Back to Top </a>&nbsp;&nbsp;&nbsp;
+</td>
+</tr>
+<tr>
+<td colspan="3">
+<table xmlns:authors="authors" width="100%" class="header_separator" cellspacing="0" cellpadding="0">
+<tr>
+<td align="center" class="header_separator"></td>
+</tr>
+</table><br xmlns:authors="authors"></td>
+</tr>
+<tr>
+<td colspan="3" align="left">
+<table width="100%" bgcolor="#FFFFFF" class="doubleborder" cellpadding="0" cellspacing="0">
+<tr>
+<td style="padding-right:10px;padding-left:10px" colspan="4" class="tree"><b>/com.parasoft:project-with-default-package/src/main/java/Calculator.java</b></td>
+</tr>
+<tr>
+<td width="1%" align="right" class="tree"></td>
+<td width="2%" align="right" valign="top" class="tree"><font class="gray">1:</font>&nbsp;
+</td>
+<td valign="top" class="tree"><span style="white-space: pre-wrap;">Compilation unit should be placed inside a non-default package</span>&nbsp;<font class="gray">rev.</font>&nbsp;<font class="gray">330c823b10d045b5307308e81e887fbad50ea376</font></td>
+<td style="white-space: nowrap; padding-right:10px;" align="right" valign="top" class="tree"><font class="gray">CODSTA.ORG.UNDPN-3</font></td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td colspan="3"><br></td>
+</tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+<tr>
+<td>
+<table width="100%" cellpadding="0" cellspacing="0">
+<tr>
+<td>
+<table width="100%" cellpadding="0" cellspacing="0">
+<tr>
+<td width="40%"></td>
+<td width="20%" align="center">
+<div class="small_header">Findings by File</div>
+</td>
+<td align="right" width="40%"><a xmlns:authors="authors" class="gray_link" href="javascript:expandCSDetails()">Expand All</a>&nbsp;&nbsp;&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:collapseCSDetails()">Collapse All</a>&nbsp;&nbsp;&nbsp;<a xmlns:authors="authors" class="blue_link" href="#top">Back to Top </a>&nbsp;&nbsp;&nbsp;
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table xmlns:authors="authors" width="100%" class="header_separator" cellspacing="0" cellpadding="0">
+<tr>
+<td align="center" class="header_separator"></td>
+</tr>
+</table><br xmlns:authors="authors"></td>
+</tr>
+<tr>
+<td>
+<table width="100%" class="doubleborder" cellpadding="0" cellspacing="0">
+<tr>
+<td align="left">
+<ul class="root" id="cs_foldinglist">
+<li id="cs_foldheader" class="tree">&nbsp;<font class="gray">+</font><b>&nbsp;1
+(0)                              
+&nbsp;</b><b>Total (Suppressed)</b></li>
+<ul id="cs_foldinglist">
+<li id="cs_foldheader" class="tree">&nbsp;<font class="gray">+</font><b>&nbsp;1
+(0)                              
+&nbsp;</b><b>com.parasoft:project-with-default-package</b></li>
+<ul id="cs_foldinglist">
+<li id="cs_foldheader" class="tree">&nbsp;<font class="gray">+</font><b>&nbsp;1
+(0)                              
+&nbsp;</b><b>src</b></li>
+<ul id="cs_foldinglist" style="display:none">
+<li id="cs_foldheader" class="tree">&nbsp;<font class="gray">+</font><b>&nbsp;1
+(0)                              
+&nbsp;</b><b>main</b></li>
+<ul id="cs_foldinglist" style="display:none">
+<li id="cs_foldheader" class="tree">&nbsp;<font class="gray">+</font><b>&nbsp;1
+(0)                              
+&nbsp;</b><b>java</b></li>
+<ul id="cs_foldinglist" style="display:none">
+<li id="cs_foldheader" class="tree">&nbsp;<font class="gray">+</font><b>&nbsp;1
+(0)                              
+&nbsp;</b><b>Calculator.java</b></li>
+<ul id="cs_foldinglist" style="display:none">
+<li id="item">
+<table width="89%" class="details" cellspacing="0">
+<tr>
+<td colspan="3"><b>Findings</b>:&nbsp;1
+</td>
+<td align="right" colspan="2" nowrap></td>
+</tr>
+<tr valign="bottom">
+<td width="2%"></td>
+<td width="1%" align="right"></td>
+<td width="2%" align="right" valign="top"><font class="gray">1:&nbsp;</font></td>
+<td valign="top" class="tree"><span style="white-space: pre-wrap;">Compilation unit should be placed inside a non-default package</span>&nbsp;<font class="gray">rev.</font>&nbsp;<font class="gray">330c823b10d045b5307308e81e887fbad50ea376</font></td>
+<td valign="top" width="10%" nowrap>&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:openWin(&#34;report_dev1.html#cst_dev1&#34;)">Roller Wang</a>&nbsp;
+</td>
+<td align="right" valign="top" width="10%" nowrap><font class="gray">CODSTA.ORG.UNDPN-3</font></td>
+</tr>
+</table>
+</li>
+</ul>
+<li id="cs_foldheader" class="tree">&nbsp;<font class="gray">+</font><b>&nbsp;0
+(0)                              
+&nbsp;</b><b>com</b></li>
+<ul id="cs_foldinglist" style="display:none">
+<li id="cs_foldheader" class="tree">&nbsp;<font class="gray">+</font><b>&nbsp;0
+(0)                              
+&nbsp;</b><b>parasoft</b></li>
+<ul id="cs_foldinglist" style="display:none">
+<li id="cs_foldheader" class="tree">&nbsp;<font class="gray">+</font><b>&nbsp;0
+(0)                              
+&nbsp;</b><b>another</b></li>
+<ul id="cs_foldinglist" style="display:none">
+<li id="item" class="tree">&nbsp;&nbsp;&nbsp;<b>&nbsp;0
+(0)                              
+&nbsp;</b><b>Convertor.java</b></li>
+<ul id="cs_foldinglist" style="display:none"></ul>
+</ul>
+<li id="item" class="tree">&nbsp;&nbsp;&nbsp;<b>&nbsp;0
+(0)                              
+&nbsp;</b><b>Convertor.java</b></li>
+<ul id="cs_foldinglist" style="display:none"></ul>
+<li id="cs_foldheader" class="tree">&nbsp;<font class="gray">+</font><b>&nbsp;0
+(0)                              
+&nbsp;</b><b>interfaces</b></li>
+<ul id="cs_foldinglist" style="display:none">
+<li id="item" class="tree">&nbsp;&nbsp;&nbsp;<b>&nbsp;0
+(0)                              
+&nbsp;</b><b>IConvertor.java</b></li>
+<ul id="cs_foldinglist" style="display:none"></ul>
+</ul>
+<li id="cs_foldheader" class="tree">&nbsp;<font class="gray">+</font><b>&nbsp;0
+(0)                              
+&nbsp;</b><b>interfaces2</b></li>
+<ul id="cs_foldinglist" style="display:none">
+<li id="item" class="tree">&nbsp;&nbsp;&nbsp;<b>&nbsp;0
+(0)                              
+&nbsp;</b><b>ICalculator.java</b></li>
+<ul id="cs_foldinglist" style="display:none"></ul>
+</ul>
+<li id="cs_foldheader" class="tree">&nbsp;<font class="gray">+</font><b>&nbsp;0
+(0)                              
+&nbsp;</b><b>nested</b></li>
+<ul id="cs_foldinglist" style="display:none">
+<li id="item" class="tree">&nbsp;&nbsp;&nbsp;<b>&nbsp;0
+(0)                              
+&nbsp;</b><b>PhoneFactory.java</b></li>
+<ul id="cs_foldinglist" style="display:none"></ul>
+</ul>
+</ul>
+</ul>
+</ul>
+</ul>
+</ul>
+</ul>
+</ul>
+</ul>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table><br><table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="25%"></td>
+<td align="center">
+<div class="small_header">Active Rules</div>
+</td>
+<td align="right" width="25%"><a xmlns:authors="authors" class="blue_link" href="#top">Back to Top </a>&nbsp;&nbsp;&nbsp;
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td>
+<table xmlns:authors="authors" width="100%" class="header_separator" cellspacing="0" cellpadding="0">
+<tr>
+<td align="center" class="header_separator"></td>
+</tr>
+</table><br xmlns:authors="authors"></td>
+</tr>
+<tr>
+<td align="left">
+<table width="100%" cellpadding="0" cellspacing="0" class="doubleborder">
+<tr>
+<td>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;<b>[13/74]
+&nbsp;Flow Analysis</b>&nbsp;<font class="gray">(BD)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[5/22]
+&nbsp;Possible Bugs</b>&nbsp;<font class="gray">(BD.PB)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Avoid use before explicit initialization&nbsp;<font class="gray">(BD.PB.NOTEXPLINIT-1)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Avoid use of fields before initialization in constructors and static initializers&nbsp;<font class="gray">(BD.PB.NOTINITCTOR-1)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Avoid division by zero&nbsp;<font class="gray">(BD.PB.ZERO-1)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Avoid accessing arrays out of bounds&nbsp;<font class="gray">(BD.PB.ARRAY-2)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Avoid conditions that always evaluate to the same value&nbsp;<font class="gray">(BD.PB.CC-2)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[2/2]
+&nbsp;Resources</b>&nbsp;<font class="gray">(BD.RES)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Do not use resources that have been freed&nbsp;<font class="gray">(BD.RES.FREE-1)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ensure resources are deallocated&nbsp;<font class="gray">(BD.RES.LEAKS-1)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[2/6]
+&nbsp;Threads &amp; Synchronization</b>&nbsp;<font class="gray">(BD.TRS)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Do not abandon unreleased locks&nbsp;<font class="gray">(BD.TRS.LOCK-1)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Do not use blocking methods while holding a lock&nbsp;<font class="gray">(BD.TRS.TSHL-1)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[1/1]
+&nbsp;Collections</b>&nbsp;<font class="gray">(BD.CO)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Do not modify collection while iterating over it&nbsp;<font class="gray">(BD.CO.ITMOD-1)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[2/36]
+&nbsp;Security</b>&nbsp;<font class="gray">(BD.SECURITY)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Protect against SQL injection&nbsp;<font class="gray">(BD.SECURITY.TDSQL-1)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Protect against XSS vulnerabilities&nbsp;<font class="gray">(BD.SECURITY.TDXSS-1)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[1/1]
+&nbsp;Exceptions</b>&nbsp;<font class="gray">(BD.EXCEPT)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Avoid NullPointerException&nbsp;<font class="gray">(BD.EXCEPT.NP-1)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;<b>[1/5]
+&nbsp;JavaBeans</b>&nbsp;<font class="gray">(BEAN)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Use appropriate signatures for listener method names in JavaBean classes&nbsp;<font class="gray">(BEAN.BLNC-3)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;<b>[1/6]
+&nbsp;Code Duplication Detection</b>&nbsp;<font class="gray">(CDD)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Avoid duplicate import statements&nbsp;<font class="gray">(CDD.DUPI-3)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;<b>[6/112]
+&nbsp;Coding Conventions</b>&nbsp;<font class="gray">(CODSTA)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[1/15]
+&nbsp;Organization</b>&nbsp;<font class="gray">(CODSTA.ORG)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ensure all types have a non default package name&nbsp;<font class="gray">(CODSTA.ORG.UNDPN-3)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[2/15]
+&nbsp;Error-Prone Coding</b>&nbsp;<font class="gray">(CODSTA.EPC)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Call 'super.clone()' in all 'clone()' methods&nbsp;<font class="gray">(CODSTA.EPC.SCLONE-1)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Do not use constructors in the 'clone()' method&nbsp;<font class="gray">(CODSTA.EPC.CLNC-2)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[1/39]
+&nbsp;Readability</b>&nbsp;<font class="gray">(CODSTA.READ)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Do not declare multiple variables of different types in one statement&nbsp;<font class="gray">(CODSTA.READ.VDT-3)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[2/8]
+&nbsp;Overriding and Implementing Methods</b>&nbsp;<font class="gray">(CODSTA.OIM)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Use the 'clone()' method only to implement 'Cloneable' interface&nbsp;<font class="gray">(CODSTA.OIM.CLONE2-3)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ensure 'clone()' method of non-final Cloneable class declared to throw 'CloneNotSupportedException'&nbsp;<font class="gray">(CODSTA.OIM.CLONET-3)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;<b>[20/62]
+&nbsp;Enterprise JavaBeans</b>&nbsp;<font class="gray">(EJB)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[2/19]
+&nbsp;Enterprise JavaBeans 3</b>&nbsp;<font class="gray">(EJB.EJB3)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Call 'InvocationContext.proceed()' from @AroundInvoke methods&nbsp;<font class="gray">(EJB.EJB3.CPIM-2)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ensure instance variables of @Stateful beans are Serializable&nbsp;<font class="gray">(EJB.EJB3.SIVS-2)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Declare bean classes "public"&nbsp;<font class="gray">(EJB.CDP-1)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Do not declare bean classes as "abstract"&nbsp;<font class="gray">(EJB.CNDA-1)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Do not declare bean classes as "final"&nbsp;<font class="gray">(EJB.CNDF-1)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Declare 'ejbCreate()' methods  "public", but neither "static" nor "final"&nbsp;<font class="gray">(EJB.CRTE-1)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Implement a no-argument 'ejbCreate()' method for all Message-driven bean classes&nbsp;<font class="gray">(EJB.MDBC-1)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Do not define 'finalize()' method in bean classes&nbsp;<font class="gray">(EJB.MNDF-1)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Declare a "public" constructor that takes no parameters in bean classes&nbsp;<font class="gray">(EJB.NFDC-1)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Declare 'ejbPostCreate()' "public" and neither "static" nor "final"&nbsp;<font class="gray">(EJB.PCRTE-1)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Make the return type "void" for SessionBeans or MessageDrivenBeans' 'ejbCreate()' methods&nbsp;<font class="gray">(EJB.RTC-1)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Make the return type "void" for the 'ejbPostCreate()' method&nbsp;<font class="gray">(EJB.RTP-1)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Avoid passing the "this" reference as an argument&nbsp;<font class="gray">(EJB.THISARG-1)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Do not return "this"&nbsp;<font class="gray">(EJB.THISRET-1)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Do not access or modify security configuration objects&nbsp;<font class="gray">(EJB.AMSC-2)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Declare all "static" fields in EJB bean classes "final"&nbsp;<font class="gray">(EJB.NFS-2)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;The return type of EJB finder methods should be the primary key or a collection of primary keys&nbsp;<font class="gray">(EJB.RT-2)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Do not set or create a new SecurityManager in EJBs&nbsp;<font class="gray">(EJB.SMSN-2)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Avoid starting, stopping, or managing threads in any way in bean classes&nbsp;<font class="gray">(EJB.THREAD-2)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Do not throw 'java.rmi.RemoteException' in a bean's local interface and local home interface&nbsp;<font class="gray">(EJB.RILH-3)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;<b>[5/19]
+&nbsp;Exceptions</b>&nbsp;<font class="gray">(EXCEPT)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Do not throw exceptions from the constructors of exception classes&nbsp;<font class="gray">(EXCEPT.TEFEC-1)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Catch all "Throwable" objects which may be thrown in the body of certain methods&nbsp;<font class="gray">(EXCEPT.CATO-2)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Do not abuse exceptions as flow control statements&nbsp;<font class="gray">(EXCEPT.AEFC-3)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Do not use instanceof in a catch block to check the exception type&nbsp;<font class="gray">(EXCEPT.AIOC-3)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Always chain thrown exceptions&nbsp;<font class="gray">(EXCEPT.CTE-3)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;<b>[5/12]
+&nbsp;Garbage Collection</b>&nbsp;<font class="gray">(GC)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Do not use 'finalize()' methods to unregister listeners&nbsp;<font class="gray">(GC.FM-1)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Do not call 'finalize()' explicitly&nbsp;<font class="gray">(GC.NCF-1)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Prevent potential memory leaks in ObjectOutputStreams by calling 'reset()'&nbsp;<font class="gray">(GC.OSTM-2)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Call 'super.finalize()' from 'finalize()'&nbsp;<font class="gray">(GC.FCF-3)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Call 'super.finalize()' in the "finally" block of 'finalize()' methods&nbsp;<font class="gray">(GC.IFF-3)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;<b>[1/13]
+&nbsp;Hibernate Framework</b>&nbsp;<font class="gray">(HIBERNATE)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Avoid storing unencrypted Hibernate usernames and passwords in 'web.xml' files&nbsp;<font class="gray">(HIBERNATE.UPWD-1)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;<b>[5/14]
+&nbsp;Initialization</b>&nbsp;<font class="gray">(INIT)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Avoid uninitialized reads of fields before or during constructor execution&nbsp;<font class="gray">(INIT.UIRC-1)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Do not use a "static" initializer that creates an instance of the current class before all "static final" fields are assigned&nbsp;<font class="gray">(INIT.SICUI-2)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Avoid explicitly initializing fields which have already been initialized by a superclass' constructor&nbsp;<font class="gray">(INIT.ADI-3)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Do not use initialization circularities for fields&nbsp;<font class="gray">(INIT.IC-3)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Do not use non-final "static" fields during the initialization&nbsp;<font class="gray">(INIT.NFS-3)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;<b>[1/10]
+&nbsp;Java Database Connectivity</b>&nbsp;<font class="gray">(JDBC)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Ensure index is valid in JDBC method invocation&nbsp;<font class="gray">(JDBC.BRSA-1)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;<b>[5/38]
+&nbsp;Naming Conventions</b>&nbsp;<font class="gray">(NAMING)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Do not declare types with the same name as types in the Java platform&nbsp;<font class="gray">(NAMING.DJLO-2)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Avoid using potential Java keywords as identifiers&nbsp;<font class="gray">(NAMING.ID-2)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Do not use a package name that is reserved by Sun&nbsp;<font class="gray">(NAMING.RPKG-2)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Avoid using dollar signs in names&nbsp;<font class="gray">(NAMING.DSN-3)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Do not use variables with identical names or names that differ only in case&nbsp;<font class="gray">(NAMING.UUVN-3)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;<b>[2/35]
+&nbsp;Object Oriented Programming</b>&nbsp;<font class="gray">(OOP)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Do not hide inherited fields&nbsp;<font class="gray">(OOP.AHF-1)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Do not hide inherited "static" member methods&nbsp;<font class="gray">(OOP.AHSM-3)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;<b>[4/56]
+&nbsp;Optimization</b>&nbsp;<font class="gray">(OPT)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Do not use a "private" field that is accessed in only one method; change it to a local variable&nbsp;<font class="gray">(OPT.CTLV-3)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Declare "final" fields with a known compile time value as "static"&nbsp;<font class="gray">(OPT.NSF-3)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Declare member classes "static" if possible&nbsp;<font class="gray">(OPT.SI-3)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Avoid unnecessary casting&nbsp;<font class="gray">(OPT.UNC-3)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;<b>[60/142]
+&nbsp;Possible Bugs</b>&nbsp;<font class="gray">(PB)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[5/12]
+&nbsp;Typographical Errors</b>&nbsp;<font class="gray">(PB.TYPO)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Avoid assignment within a condition&nbsp;<font class="gray">(PB.TYPO.ASI-1)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ensure that arguments passed to Java wrapper classes do not contain typos&nbsp;<font class="gray">(PB.TYPO.WT-1)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ensure "switch" statements do not contain typos&nbsp;<font class="gray">(PB.TYPO.TLS-2)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Avoid assigning same variable in the fall-through switch case&nbsp;<font class="gray">(PB.TYPO.DAV-3)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Do not give methods and fields the same name as the enclosing class or each other&nbsp;<font class="gray">(PB.TYPO.NAMING-3)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[5/12]
+&nbsp;Useless Code</b>&nbsp;<font class="gray">(PB.USC)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Avoid unreachable "else if" and "else" cases&nbsp;<font class="gray">(PB.USC.UIF-1)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Avoid increment and decrement statements which have no effect&nbsp;<font class="gray">(PB.USC.OI-2)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Do not use the unary operator '+'&nbsp;<font class="gray">(PB.USC.UNARY-2)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Avoid empty statements&nbsp;<font class="gray">(PB.USC.AES-3)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Avoid self assignments/initializations to fields and/or local variables&nbsp;<font class="gray">(PB.USC.SAFL-3)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[10/17]
+&nbsp;Numerical Errors</b>&nbsp;<font class="gray">(PB.NUM)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Avoid calculations which result in overflow or NaN&nbsp;<font class="gray">(PB.NUM.ICO-1)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Do not assign the result of an integer division to a floating point variable&nbsp;<font class="gray">(PB.NUM.IDCD-1)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Avoid comparisons to Double.NaN or Float.NaN&nbsp;<font class="gray">(PB.NUM.NAN-1)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Do not initialize array dimensions with negative numbers&nbsp;<font class="gray">(PB.NUM.NIA-1)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Do not pass floating point values to the 'BigDecimal' constructor&nbsp;<font class="gray">(PB.NUM.BBDCC-2)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Do not use an integer outside the range of [0, 31] as the amount of a shift&nbsp;<font class="gray">(PB.NUM.BSA-2)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Do not cast primitive data types to lower precision&nbsp;<font class="gray">(PB.NUM.CLP-2)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Do not compare floating point types&nbsp;<font class="gray">(PB.NUM.DCF-3)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Do not use floating point variables as loop indices&nbsp;<font class="gray">(PB.NUM.FPLI-3)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Avoid casting the result of an integer multiplication to "long"&nbsp;<font class="gray">(PB.NUM.IMOF-3)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[12/25]
+&nbsp;API Usage and Implementation</b>&nbsp;<font class="gray">(PB.API)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Do not call the 'next' method from the 'hasNext' method of an Iterator&nbsp;<font class="gray">(PB.API.HNCN-1)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Do not use "URL" objects in "Collections" or "Maps"&nbsp;<font class="gray">(PB.API.IUMS-1)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Do not call 'setSize()' in 'ComponentListener.componentResized()'&nbsp;<font class="gray">(PB.API.DNCSS-2)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Do not create an empty JarFile entry or an empty ZipFile entry&nbsp;<font class="gray">(PB.API.EJF-2)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Avoid calling 'equals(null)'&nbsp;<font class="gray">(PB.API.EQNL-2)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ensure that all types which are used as keys in Sets and Maps override the 'equals()' and 'hashCode()' methods&nbsp;<font class="gray">(PB.API.KOEH-2)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Do not overload the 'finalize()' method&nbsp;<font class="gray">(PB.API.OF-2)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Avoid using "." as a regular expression in 'String.replaceAll()' and 'String.replaceFirst()'&nbsp;<font class="gray">(PB.API.REP-2)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Do not pass a 'char' to the 'StringBuffer(int)' constructor&nbsp;<font class="gray">(PB.API.SBCC-2)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Avoid improper casting of the results of the 'next' methods in the 'java.util.Random' class&nbsp;<font class="gray">(PB.API.UNI-2)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Avoid using the 'equals()' and 'hashCode()' methods of "java.net.URL"&nbsp;<font class="gray">(PB.API.URL-2)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Update values which may be using to compare with vendor properties&nbsp;<font class="gray">(PB.API.VENDOR-2)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[7/18]
+&nbsp;Logical Errors</b>&nbsp;<font class="gray">(PB.LOGIC)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Do not call 'equals()' methods that always return false&nbsp;<font class="gray">(PB.LOGIC.EQUS-1)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Avoid calling 'equals()' with same object&nbsp;<font class="gray">(PB.LOGIC.ESO-1)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Avoid infinite recursive method calls&nbsp;<font class="gray">(PB.LOGIC.FLRC-1)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Do not increment or decrement on the same variable over multiple nested "for" loop statements&nbsp;<font class="gray">(PB.LOGIC.JI-2)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ensure that the objects used within a loop's condition are properly accessed within the loop's body&nbsp;<font class="gray">(PB.LOGIC.OAMC-2)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Avoid bugs in the usage of loop variables&nbsp;<font class="gray">(PB.LOGIC.INDEX-3)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Avoid out of range comparisons&nbsp;<font class="gray">(PB.LOGIC.OOR-3)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[11/33]
+&nbsp;Confusing or Unintended Behavior</b>&nbsp;<font class="gray">(PB.CUB)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Avoid using 'return's inside 'finally blocks if thare are other 'return's inside the try-catch block&nbsp;<font class="gray">(PB.CUB.ARCF-1)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Do not exit "finally" blocks abruptly&nbsp;<font class="gray">(PB.CUB.ATSF-1)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Do not use the "+" string concatenation operator to concatenate numbers; use it only to add numbers&nbsp;<font class="gray">(PB.CUB.DCP-2)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Avoid erroneously placing statements outside blocks&nbsp;<font class="gray">(PB.CUB.EBI-2)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Avoid overloading varargs methods&nbsp;<font class="gray">(PB.CUB.OVAM-2)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Do not use "char" arrays in "String" concatenations&nbsp;<font class="gray">(PB.CUB.SAC-2)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Do not use '==' or '!=' to compare objects&nbsp;<font class="gray">(PB.CUB.UEIC-2)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Avoid dangling "else" statements&nbsp;<font class="gray">(PB.CUB.ADE-3)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Avoid confusing assignments to constructor arguments&nbsp;<font class="gray">(PB.CUB.AWP-3)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Avoid improper concatenation of characters with numbers&nbsp;<font class="gray">(PB.CUB.CNVC-3)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Use the method name 'main()' only for the entry point method&nbsp;<font class="gray">(PB.CUB.MAIN-3)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>[7/17]
+&nbsp;Runtime Exceptions</b>&nbsp;<font class="gray">(PB.RE)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Do not add a collection to itself&nbsp;<font class="gray">(PB.RE.ACTI-1)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Check whether or not "readLine()" returned null before dereferencing the return value&nbsp;<font class="gray">(PB.RE.IDRL-1)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Avoid using methods add() from JLayer class&nbsp;<font class="gray">(PB.RE.JLAY-1)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;When used HttpURLConnection always check return value from the getResponseCode() methods before call getInputStream()&nbsp;<font class="gray">(PB.RE.RCODE-2)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Avoid modifying fixed-size Collections&nbsp;<font class="gray">(PB.RE.AMFSL-3)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Avoid possible ArrayStoreExceptions&nbsp;<font class="gray">(PB.RE.ASE-3)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ensure 'Iterator.next()' method implementations throw 'NoSuchElementException'&nbsp;<font class="gray">(PB.RE.CTNSE-3)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Ensure that exactly one type has the same name as the file name&nbsp;<font class="gray">(PB.OCSF-3)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Place "default" as the last case of the "switch" statement&nbsp;<font class="gray">(PB.PDCL-3)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Provide "default:" for each "switch" statement&nbsp;<font class="gray">(PB.PDS-3)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;<b>[10/17]
+&nbsp;Property Files</b>&nbsp;<font class="gray">(PROPS)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Avoid duplicated property names&nbsp;<font class="gray">(PROPS.DUPN-1)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Avoid empty property names&nbsp;<font class="gray">(PROPS.EMN-2)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Avoid misusing arguments in property values&nbsp;<font class="gray">(PROPS.IARG-2)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Avoid incomplete property entries&nbsp;<font class="gray">(PROPS.ICK-2)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Avoid unmatched property entries in resources with different locales&nbsp;<font class="gray">(PROPS.MENTRY-2)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Avoid duplicated property values&nbsp;<font class="gray">(PROPS.DUPV-3)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Avoid empty property values&nbsp;<font class="gray">(PROPS.EMV-3)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Follow the limit for number of property entries&nbsp;<font class="gray">(PROPS.FM-3)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Avoid misusing the line continuation character '\'&nbsp;<font class="gray">(PROPS.IVCC-3)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Ensure that property entries are localized correctly&nbsp;<font class="gray">(PROPS.TENTRY-3)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;<b>[8/18]
+&nbsp;Serialization</b>&nbsp;<font class="gray">(SERIAL)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Avoid classes that implement 'Externalizable' but do not define a no-argument constructor&nbsp;<font class="gray">(SERIAL.ENNAC-1)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Ensure the return type of 'readResolve()' and 'writeReplace()' methods are 'java.lang.Object'&nbsp;<font class="gray">(SERIAL.MRWD-1)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Ensure outer class is serializable if its inner class is serializable&nbsp;<font class="gray">(SERIAL.OC-1)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Ensure that the 'readObject()' and 'writeObject()' methods have the correct signature&nbsp;<font class="gray">(SERIAL.ROWO-1)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Avoid serializable classes that extend a superclass without a zero-argument constructor&nbsp;<font class="gray">(SERIAL.SNNAC-1)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Ensure Serializable classes are correct&nbsp;<font class="gray">(SERIAL.NSFSC-2)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Declare 'serialPersistentFields' "private static final"&nbsp;<font class="gray">(SERIAL.SPF-2)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Ensure that all fields are assigned by the 'readObject()' method and written out by the 'writeObject()' method&nbsp;<font class="gray">(SERIAL.RWAF-3)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;<b>[1/17]
+&nbsp;Servlets</b>&nbsp;<font class="gray">(SERVLET)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Ensure that all servlets have a corresponding mapping in 'web.xml' files&nbsp;<font class="gray">(SERVLET.SCM-2)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;<b>[1/14]
+&nbsp;Spring Framework</b>&nbsp;<font class="gray">(SPRING)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Follow configuration class conventions&nbsp;<font class="gray">(SPRING.ATCFG-2)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;<b>[5/30]
+&nbsp;Struts Framework</b>&nbsp;<font class="gray">(STRUTS)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Avoid accessing a database from Action Classes&nbsp;<font class="gray">(STRUTS.ACDA-1)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Avoid defining multiple form beans with the same name in 'struts-config.xml' files&nbsp;<font class="gray">(STRUTS.MFBSN-2)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Use the 'minlength' validator for password fields in 'validation.xml'&nbsp;<font class="gray">(STRUTS.MLVP-2)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Ensure that the @path attribute of '&lt;action&gt;' and '&lt;forward&gt;' elements begins with '/' in 'struts-config.xml' files&nbsp;<font class="gray">(STRUTS.PFS-2)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Ensure that the 'scope' attribute is set to either "request" or "session" for actions and exceptions in 'struts-config.xml'
+files&nbsp;<font class="gray">(STRUTS.RSS-2)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;<b>[16/52]
+&nbsp;Threads &amp; Synchronization</b>&nbsp;<font class="gray">(TRS)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Do not cause deadlocks by calling a "synchronized" method from a "synchronized" method&nbsp;<font class="gray">(TRS.CSFS-1)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Release Locks in a "finally" block&nbsp;<font class="gray">(TRS.RLF-1)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Do not synchronize on constant Strings&nbsp;<font class="gray">(TRS.SCS-1)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Manually synchronize on 'synchronized' collections when iterating over them&nbsp;<font class="gray">(TRS.SSCI-1)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Call 'wait()' and 'await()' only inside a loop that tests the liveness condition&nbsp;<font class="gray">(TRS.UWIL-1)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Do not use variables of the unsafe type 'java.lang.ThreadGroup'&nbsp;<font class="gray">(TRS.AUTG-2)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Do not call the "start" method of threads from inside a constructor&nbsp;<font class="gray">(TRS.CSTART-2)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Do not synchronize on "public" fields since doing so may cause deadlocks&nbsp;<font class="gray">(TRS.SOPF-2)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Avoid calling unsafe deprecated methods of 'Thread' and 'Runtime'&nbsp;<font class="gray">(TRS.THRD-2)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Do not call 'Thread.sleep()' while holding a lock since doing so can cause poor performance and deadlocks&nbsp;<font class="gray">(TRS.TSHL-2)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Make lazy initializations thread-safe&nbsp;<font class="gray">(TRS.ILI-3)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Ensure 'wait()', 'notify()' and 'notifyAll()' are invoked on an object that is clearly synchronized in its enclosing mod scope&nbsp;<font class="gray">(TRS.NSYN-3)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Do not synchronize on non-"final" fields since doing so makes it difficult to guarantee mutual exclusion&nbsp;<font class="gray">(TRS.SOUF-3)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Synchronize access to "static" SimpleDataFormats&nbsp;<font class="gray">(TRS.SSDF-3)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Do not start a thread without specifying a 'run()' method&nbsp;<font class="gray">(TRS.UT-3)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Use 'wait()' and 'notifyAll()' instead of polling loops&nbsp;<font class="gray">(TRS.UWNA-3)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;<b>[9/28]
+&nbsp;Unused Code</b>&nbsp;<font class="gray">(UC)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Avoid empty static and non-static initializers&nbsp;<font class="gray">(UC.AESTAT-3)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Avoid unused labels&nbsp;<font class="gray">(UC.AUL-3)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Avoid collection objects that are never read&nbsp;<font class="gray">(UC.AURCO-3)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Avoid local variables that are never read&nbsp;<font class="gray">(UC.AURV-3)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Avoid duplicate code in 'if' branches&nbsp;<font class="gray">(UC.DIEB-3)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Do not explicitly "import" the java.lang.* "package"&nbsp;<font class="gray">(UC.DIL-3)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Avoid empty "finalize()" methods&nbsp;<font class="gray">(UC.EF-3)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Avoid empty "synchronized" statements&nbsp;<font class="gray">(UC.SNE-3)</font>&nbsp;
+</td>
+</tr>
+</table>
+<table cellspacing="0" cellpadding="0">
+<tr>
+<td class="tree">&nbsp;&nbsp;&nbsp;&nbsp;Avoid unnecessary 'if' statements&nbsp;<font class="gray">(UC.UCIF-3)</font>&nbsp;
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table><br><a name="met"></a><table width="100%" border="0" bordercolor="#CBCBCB" cellpadding="0" cellspacing="0">
+<tr>
+<td>
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="40%"></td>
+<td align="center" width="15%">
+<div class="small_header">Metrics Summary</div>
+</td>
+<td align="right" width="40%">&nbsp;&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:expandMetricsDetails()">Expand All</a>&nbsp;&nbsp;&nbsp;<a xmlns:authors="authors" class="gray_link" href="javascript:collapseMetricsDetails()">Collapse All</a>&nbsp;&nbsp;&nbsp;<a xmlns:authors="authors" class="blue_link" href="#top">Back to Top </a>&nbsp;&nbsp;&nbsp;
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<table width="100%" border="0" bordercolor="#CBCBCB" cellpadding="0" cellspacing="0">
+<tr>
+<td>
+<table class="singleborder" width="100%" cellpadding="0" cellspacing="0">
+<tr bgcolor="#CCCCCC" bordercolor="#CBCBCB" class="details" cellspacing="0">
+<td class="singleborder" align="center" width="40%">Metric name</td>
+<td class="singleborder" align="center" width="12%">Number of items</td>
+<td class="singleborder" align="center" width="12%">Average</td>
+<td class="singleborder" align="center" width="12%">Std. Deviation</td>
+<td class="singleborder" align="center" width="12%">Maximum</td>
+<td class="singleborder" align="center" width="12%">Minimum</td>
+</tr>
+<tr>
+<td class="singleborder" style="padding-left:5px; padding-right:5px" colspan="6" width="100%">
+<ul class="metrics" id="metrics_foldinglist" style="padding-left: 0px;">
+<table id="metrics_foldheader" width="100%" class="details" cellpadding="0" cellspacing="0">
+<tr>
+<td align="left" border="0" bordercolor="#CBCBCB" width="40%"><font color="#CCCCCC">+</font>&nbsp;<b>Coupling Between Objects</b>&nbsp;<font class="gray">(METRIC.CBO)</font></td>
+<td align="center" width="12%"><b>11</b></td>
+<td align="center" width="12%"><b>0.545</b></td>
+<td align="center" width="12%"><b>0.782</b></td>
+<td align="center" width="12%"><b>2</b></td>
+<td align="center" width="12%"><b>0</b></td>
+</tr>
+</table>
+<ul class="metrics" id="metrics_foldinglist" style="padding-left: 0px;">
+<table width="100%" class="details" cellpadding="0" cellspacing="0" style="overflow:hidden;">
+<tr class="alternated">
+<td style="width:40%" class="tree" align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;com.parasoft:project-with-default-package</td>
+<td align="center" width="12%">11</td>
+<td align="center" width="12%">0.545</td>
+<td align="center" width="12%">0.782</td>
+<td align="center" width="12%">2</td>
+<td align="center" width="12%">0</td>
+</tr>
+</table>
+<ul class="metrics" id="metrics_foldinglist" style="padding-left: 0px;"></ul><br></ul>
+<table id="metrics_foldheader" width="100%" class="details" cellpadding="0" cellspacing="0">
+<tr>
+<td align="left" border="0" bordercolor="#CBCBCB" width="40%"><font color="#CCCCCC">+</font>&nbsp;<b>McCabe Cyclomatic Complexity</b>&nbsp;<font class="gray">(METRIC.CC)</font></td>
+<td align="center" width="12%"><b>17</b></td>
+<td align="center" width="12%"><b>1</b></td>
+<td align="center" width="12%"><b>0</b></td>
+<td align="center" width="12%"><b>1</b></td>
+<td align="center" width="12%"><b>1</b></td>
+</tr>
+</table>
+<ul class="metrics" id="metrics_foldinglist" style="padding-left: 0px;">
+<table width="100%" class="details" cellpadding="0" cellspacing="0" style="overflow:hidden;">
+<tr>
+<td style="width:40%" class="tree" align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;com.parasoft:project-with-default-package</td>
+<td align="center" width="12%">17</td>
+<td align="center" width="12%">1</td>
+<td align="center" width="12%">0</td>
+<td align="center" width="12%">1</td>
+<td align="center" width="12%">1</td>
+</tr>
+</table>
+<ul class="metrics" id="metrics_foldinglist" style="padding-left: 0px;"></ul><br></ul>
+<table id="metrics_foldheader" width="100%" class="details" cellpadding="0" cellspacing="0">
+<tr>
+<td align="left" border="0" bordercolor="#CBCBCB" width="40%"><font color="#CCCCCC">+</font>&nbsp;<b>Comment/Logical Lines in Files</b>&nbsp;<font class="gray">(METRIC.CLLOCRIF)</font></td>
+<td align="center" width="12%"><b>5</b></td>
+<td align="center" width="12%"><b>0</b></td>
+<td align="center" width="12%"><b>0</b></td>
+<td align="center" width="12%"><b>0</b></td>
+<td align="center" width="12%"><b>0</b></td>
+</tr>
+</table>
+<ul class="metrics" id="metrics_foldinglist" style="padding-left: 0px;">
+<table width="100%" class="details" cellpadding="0" cellspacing="0" style="overflow:hidden;">
+<tr class="alternated">
+<td style="width:40%" class="tree" align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;com.parasoft:project-with-default-package</td>
+<td align="center" width="12%">5</td>
+<td align="center" width="12%">0</td>
+<td align="center" width="12%">0</td>
+<td align="center" width="12%">0</td>
+<td align="center" width="12%">0</td>
+</tr>
+</table>
+<ul class="metrics" id="metrics_foldinglist" style="padding-left: 0px;"></ul><br></ul>
+<table id="metrics_foldheader" width="100%" class="details" cellpadding="0" cellspacing="0">
+<tr>
+<td align="left" border="0" bordercolor="#CBCBCB" width="40%"><font color="#CCCCCC">+</font>&nbsp;<b>Comment/Logical Lines in Methods</b>&nbsp;<font class="gray">(METRIC.CLLOCRIM)</font></td>
+<td align="center" width="12%"><b>15</b></td>
+<td align="center" width="12%"><b>0</b></td>
+<td align="center" width="12%"><b>0</b></td>
+<td align="center" width="12%"><b>0</b></td>
+<td align="center" width="12%"><b>0</b></td>
+</tr>
+</table>
+<ul class="metrics" id="metrics_foldinglist" style="padding-left: 0px;">
+<table width="100%" class="details" cellpadding="0" cellspacing="0" style="overflow:hidden;">
+<tr>
+<td style="width:40%" class="tree" align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;com.parasoft:project-with-default-package</td>
+<td align="center" width="12%">15</td>
+<td align="center" width="12%">0</td>
+<td align="center" width="12%">0</td>
+<td align="center" width="12%">0</td>
+<td align="center" width="12%">0</td>
+</tr>
+</table>
+<ul class="metrics" id="metrics_foldinglist" style="padding-left: 0px;"></ul><br></ul>
+<table id="metrics_foldheader" width="100%" class="details" cellpadding="0" cellspacing="0">
+<tr>
+<td align="left" border="0" bordercolor="#CBCBCB" width="40%"><font color="#CCCCCC">+</font>&nbsp;<b>Comment/Logical Lines in Types</b>&nbsp;<font class="gray">(METRIC.CLLOCRIT)</font></td>
+<td align="center" width="12%"><b>7</b></td>
+<td align="center" width="12%"><b>0</b></td>
+<td align="center" width="12%"><b>0</b></td>
+<td align="center" width="12%"><b>0</b></td>
+<td align="center" width="12%"><b>0</b></td>
+</tr>
+</table>
+<ul class="metrics" id="metrics_foldinglist" style="padding-left: 0px;">
+<table width="100%" class="details" cellpadding="0" cellspacing="0" style="overflow:hidden;">
+<tr class="alternated">
+<td style="width:40%" class="tree" align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;com.parasoft:project-with-default-package</td>
+<td align="center" width="12%">7</td>
+<td align="center" width="12%">0</td>
+<td align="center" width="12%">0</td>
+<td align="center" width="12%">0</td>
+<td align="center" width="12%">0</td>
+</tr>
+</table>
+<ul class="metrics" id="metrics_foldinglist" style="padding-left: 0px;"></ul><br></ul>
+<table id="metrics_foldheader" width="100%" class="details" cellpadding="0" cellspacing="0">
+<tr>
+<td align="left" border="0" bordercolor="#CBCBCB" width="40%"><font color="#CCCCCC">+</font>&nbsp;<b>Essential Cyclomatic Complexity</b>&nbsp;<font class="gray">(METRIC.ECC)</font></td>
+<td align="center" width="12%"><b>17</b></td>
+<td align="center" width="12%"><b>1</b></td>
+<td align="center" width="12%"><b>0</b></td>
+<td align="center" width="12%"><b>1</b></td>
+<td align="center" width="12%"><b>1</b></td>
+</tr>
+</table>
+<ul class="metrics" id="metrics_foldinglist" style="padding-left: 0px;">
+<table width="100%" class="details" cellpadding="0" cellspacing="0" style="overflow:hidden;">
+<tr>
+<td style="width:40%" class="tree" align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;com.parasoft:project-with-default-package</td>
+<td align="center" width="12%">17</td>
+<td align="center" width="12%">1</td>
+<td align="center" width="12%">0</td>
+<td align="center" width="12%">1</td>
+<td align="center" width="12%">1</td>
+</tr>
+</table>
+<ul class="metrics" id="metrics_foldinglist" style="padding-left: 0px;"></ul><br></ul>
+<table id="metrics_foldheader" width="100%" class="details" cellpadding="0" cellspacing="0">
+<tr>
+<td align="left" border="0" bordercolor="#CBCBCB" width="40%"><font color="#CCCCCC">+</font>&nbsp;<b>Fan Out</b>&nbsp;<font class="gray">(METRIC.FO)</font></td>
+<td align="center" width="12%"><b>9</b></td>
+<td align="center" width="12%"><b>0.556</b></td>
+<td align="center" width="12%"><b>0.685</b></td>
+<td align="center" width="12%"><b>2</b></td>
+<td align="center" width="12%"><b>0</b></td>
+</tr>
+</table>
+<ul class="metrics" id="metrics_foldinglist" style="padding-left: 0px;">
+<table width="100%" class="details" cellpadding="0" cellspacing="0" style="overflow:hidden;">
+<tr class="alternated">
+<td style="width:40%" class="tree" align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;com.parasoft:project-with-default-package</td>
+<td align="center" width="12%">9</td>
+<td align="center" width="12%">0.556</td>
+<td align="center" width="12%">0.685</td>
+<td align="center" width="12%">2</td>
+<td align="center" width="12%">0</td>
+</tr>
+</table>
+<ul class="metrics" id="metrics_foldinglist" style="padding-left: 0px;"></ul><br></ul>
+<table id="metrics_foldheader" width="100%" class="details" cellpadding="0" cellspacing="0">
+<tr>
+<td align="left" border="0" bordercolor="#CBCBCB" width="40%"><font color="#CCCCCC">+</font>&nbsp;<b>Halstead Difficulty</b>&nbsp;<font class="gray">(METRIC.HDIFM)</font></td>
+<td align="center" width="12%"><b>17</b></td>
+<td align="center" width="12%"><b>3.014</b></td>
+<td align="center" width="12%"><b>1.531</b></td>
+<td align="center" width="12%"><b>7</b></td>
+<td align="center" width="12%"><b>0.5</b></td>
+</tr>
+</table>
+<ul class="metrics" id="metrics_foldinglist" style="padding-left: 0px;">
+<table width="100%" class="details" cellpadding="0" cellspacing="0" style="overflow:hidden;">
+<tr>
+<td style="width:40%" class="tree" align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;com.parasoft:project-with-default-package</td>
+<td align="center" width="12%">17</td>
+<td align="center" width="12%">3.014</td>
+<td align="center" width="12%">1.531</td>
+<td align="center" width="12%">7</td>
+<td align="center" width="12%">0.5</td>
+</tr>
+</table>
+<ul class="metrics" id="metrics_foldinglist" style="padding-left: 0px;"></ul><br></ul>
+<table id="metrics_foldheader" width="100%" class="details" cellpadding="0" cellspacing="0">
+<tr>
+<td align="left" border="0" bordercolor="#CBCBCB" width="40%"><font color="#CCCCCC">+</font>&nbsp;<b>Halstead Effort</b>&nbsp;<font class="gray">(METRIC.HEFM)</font></td>
+<td align="center" width="12%"><b>17</b></td>
+<td align="center" width="12%"><b>140.225</b></td>
+<td align="center" width="12%"><b>134.55</b></td>
+<td align="center" width="12%"><b>586.333</b></td>
+<td align="center" width="12%"><b>2.377</b></td>
+</tr>
+</table>
+<ul class="metrics" id="metrics_foldinglist" style="padding-left: 0px;">
+<table width="100%" class="details" cellpadding="0" cellspacing="0" style="overflow:hidden;">
+<tr class="alternated">
+<td style="width:40%" class="tree" align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;com.parasoft:project-with-default-package</td>
+<td align="center" width="12%">17</td>
+<td align="center" width="12%">140.225</td>
+<td align="center" width="12%">134.55</td>
+<td align="center" width="12%">586.333</td>
+<td align="center" width="12%">2.377</td>
+</tr>
+</table>
+<ul class="metrics" id="metrics_foldinglist" style="padding-left: 0px;"></ul><br></ul>
+<table id="metrics_foldheader" width="100%" class="details" cellpadding="0" cellspacing="0">
+<tr>
+<td align="left" border="0" bordercolor="#CBCBCB" width="40%"><font color="#CCCCCC">+</font>&nbsp;<b>Halstead Intelligent Content</b>&nbsp;<font class="gray">(METRIC.HICM)</font></td>
+<td align="center" width="12%"><b>17</b></td>
+<td align="center" width="12%"><b>12.464</b></td>
+<td align="center" width="12%"><b>3.925</b></td>
+<td align="center" width="12%"><b>21.051</b></td>
+<td align="center" width="12%"><b>8.242</b></td>
+</tr>
+</table>
+<ul class="metrics" id="metrics_foldinglist" style="padding-left: 0px;">
+<table width="100%" class="details" cellpadding="0" cellspacing="0" style="overflow:hidden;">
+<tr>
+<td style="width:40%" class="tree" align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;com.parasoft:project-with-default-package</td>
+<td align="center" width="12%">17</td>
+<td align="center" width="12%">12.464</td>
+<td align="center" width="12%">3.925</td>
+<td align="center" width="12%">21.051</td>
+<td align="center" width="12%">8.242</td>
+</tr>
+</table>
+<ul class="metrics" id="metrics_foldinglist" style="padding-left: 0px;"></ul><br></ul>
+<table id="metrics_foldheader" width="100%" class="details" cellpadding="0" cellspacing="0">
+<tr>
+<td align="left" border="0" bordercolor="#CBCBCB" width="40%"><font color="#CCCCCC">+</font>&nbsp;<b>Halstead Program Length</b>&nbsp;<font class="gray">(METRIC.HLENM)</font></td>
+<td align="center" width="12%"><b>17</b></td>
+<td align="center" width="12%"><b>11.353</b></td>
+<td align="center" width="12%"><b>4.982</b></td>
+<td align="center" width="12%"><b>22</b></td>
+<td align="center" width="12%"><b>3</b></td>
+</tr>
+</table>
+<ul class="metrics" id="metrics_foldinglist" style="padding-left: 0px;">
+<table width="100%" class="details" cellpadding="0" cellspacing="0" style="overflow:hidden;">
+<tr class="alternated">
+<td style="width:40%" class="tree" align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;com.parasoft:project-with-default-package</td>
+<td align="center" width="12%">17</td>
+<td align="center" width="12%">11.353</td>
+<td align="center" width="12%">4.982</td>
+<td align="center" width="12%">22</td>
+<td align="center" width="12%">3</td>
+</tr>
+</table>
+<ul class="metrics" id="metrics_foldinglist" style="padding-left: 0px;"></ul><br></ul>
+<table id="metrics_foldheader" width="100%" class="details" cellpadding="0" cellspacing="0">
+<tr>
+<td align="left" border="0" bordercolor="#CBCBCB" width="40%"><font color="#CCCCCC">+</font>&nbsp;<b>Halstead Program Level</b>&nbsp;<font class="gray">(METRIC.HLEVM)</font></td>
+<td align="center" width="12%"><b>17</b></td>
+<td align="center" width="12%"><b>0.532</b></td>
+<td align="center" width="12%"><b>0.545</b></td>
+<td align="center" width="12%"><b>2</b></td>
+<td align="center" width="12%"><b>0.143</b></td>
+</tr>
+</table>
+<ul class="metrics" id="metrics_foldinglist" style="padding-left: 0px;">
+<table width="100%" class="details" cellpadding="0" cellspacing="0" style="overflow:hidden;">
+<tr>
+<td style="width:40%" class="tree" align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;com.parasoft:project-with-default-package</td>
+<td align="center" width="12%">17</td>
+<td align="center" width="12%">0.532</td>
+<td align="center" width="12%">0.545</td>
+<td align="center" width="12%">2</td>
+<td align="center" width="12%">0.143</td>
+</tr>
+</table>
+<ul class="metrics" id="metrics_foldinglist" style="padding-left: 0px;"></ul><br></ul>
+<table id="metrics_foldheader" width="100%" class="details" cellpadding="0" cellspacing="0">
+<tr>
+<td align="left" border="0" bordercolor="#CBCBCB" width="40%"><font color="#CCCCCC">+</font>&nbsp;<b>Halstead Number of Bugs</b>&nbsp;<font class="gray">(METRIC.HNOBM)</font></td>
+<td align="center" width="12%"><b>17</b></td>
+<td align="center" width="12%"><b>0.008</b></td>
+<td align="center" width="12%"><b>0.005</b></td>
+<td align="center" width="12%"><b>0.023</b></td>
+<td align="center" width="12%"><b>0.001</b></td>
+</tr>
+</table>
+<ul class="metrics" id="metrics_foldinglist" style="padding-left: 0px;">
+<table width="100%" class="details" cellpadding="0" cellspacing="0" style="overflow:hidden;">
+<tr class="alternated">
+<td style="width:40%" class="tree" align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;com.parasoft:project-with-default-package</td>
+<td align="center" width="12%">17</td>
+<td align="center" width="12%">0.008</td>
+<td align="center" width="12%">0.005</td>
+<td align="center" width="12%">0.023</td>
+<td align="center" width="12%">0.001</td>
+</tr>
+</table>
+<ul class="metrics" id="metrics_foldinglist" style="padding-left: 0px;"></ul><br></ul>
+<table id="metrics_foldheader" width="100%" class="details" cellpadding="0" cellspacing="0">
+<tr>
+<td align="left" border="0" bordercolor="#CBCBCB" width="40%"><font color="#CCCCCC">+</font>&nbsp;<b>Halstead Time to Program</b>&nbsp;<font class="gray">(METRIC.HTTPM)</font></td>
+<td align="center" width="12%"><b>17</b></td>
+<td align="center" width="12%"><b>7.79</b></td>
+<td align="center" width="12%"><b>7.475</b></td>
+<td align="center" width="12%"><b>32.574</b></td>
+<td align="center" width="12%"><b>0.132</b></td>
+</tr>
+</table>
+<ul class="metrics" id="metrics_foldinglist" style="padding-left: 0px;">
+<table width="100%" class="details" cellpadding="0" cellspacing="0" style="overflow:hidden;">
+<tr>
+<td style="width:40%" class="tree" align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;com.parasoft:project-with-default-package</td>
+<td align="center" width="12%">17</td>
+<td align="center" width="12%">7.79</td>
+<td align="center" width="12%">7.475</td>
+<td align="center" width="12%">32.574</td>
+<td align="center" width="12%">0.132</td>
+</tr>
+</table>
+<ul class="metrics" id="metrics_foldinglist" style="padding-left: 0px;"></ul><br></ul>
+<table id="metrics_foldheader" width="100%" class="details" cellpadding="0" cellspacing="0">
+<tr>
+<td align="left" border="0" bordercolor="#CBCBCB" width="40%"><font color="#CCCCCC">+</font>&nbsp;<b>Halstead Program Vocabulary</b>&nbsp;<font class="gray">(METRIC.HVOCM)</font></td>
+<td align="center" width="12%"><b>17</b></td>
+<td align="center" width="12%"><b>9.176</b></td>
+<td align="center" width="12%"><b>2.975</b></td>
+<td align="center" width="12%"><b>14</b></td>
+<td align="center" width="12%"><b>3</b></td>
+</tr>
+</table>
+<ul class="metrics" id="metrics_foldinglist" style="padding-left: 0px;">
+<table width="100%" class="details" cellpadding="0" cellspacing="0" style="overflow:hidden;">
+<tr class="alternated">
+<td style="width:40%" class="tree" align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;com.parasoft:project-with-default-package</td>
+<td align="center" width="12%">17</td>
+<td align="center" width="12%">9.176</td>
+<td align="center" width="12%">2.975</td>
+<td align="center" width="12%">14</td>
+<td align="center" width="12%">3</td>
+</tr>
+</table>
+<ul class="metrics" id="metrics_foldinglist" style="padding-left: 0px;"></ul><br></ul>
+<table id="metrics_foldheader" width="100%" class="details" cellpadding="0" cellspacing="0">
+<tr>
+<td align="left" border="0" bordercolor="#CBCBCB" width="40%"><font color="#CCCCCC">+</font>&nbsp;<b>Halstead Program Volume</b>&nbsp;<font class="gray">(METRIC.HVOLM)</font></td>
+<td align="center" width="12%"><b>17</b></td>
+<td align="center" width="12%"><b>37.781</b></td>
+<td align="center" width="12%"><b>20.535</b></td>
+<td align="center" width="12%"><b>83.762</b></td>
+<td align="center" width="12%"><b>4.755</b></td>
+</tr>
+</table>
+<ul class="metrics" id="metrics_foldinglist" style="padding-left: 0px;">
+<table width="100%" class="details" cellpadding="0" cellspacing="0" style="overflow:hidden;">
+<tr>
+<td style="width:40%" class="tree" align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;com.parasoft:project-with-default-package</td>
+<td align="center" width="12%">17</td>
+<td align="center" width="12%">37.781</td>
+<td align="center" width="12%">20.535</td>
+<td align="center" width="12%">83.762</td>
+<td align="center" width="12%">4.755</td>
+</tr>
+</table>
+<ul class="metrics" id="metrics_foldinglist" style="padding-left: 0px;"></ul><br></ul>
+<table id="metrics_foldheader" width="100%" class="details" cellpadding="0" cellspacing="0">
+<tr>
+<td align="left" border="0" bordercolor="#CBCBCB" width="40%"><font color="#CCCCCC">+</font>&nbsp;<b>Inheritance Depth of Class</b>&nbsp;<font class="gray">(METRIC.IDOC)</font></td>
+<td align="center" width="12%"><b>6</b></td>
+<td align="center" width="12%"><b>1</b></td>
+<td align="center" width="12%"><b>0</b></td>
+<td align="center" width="12%"><b>1</b></td>
+<td align="center" width="12%"><b>1</b></td>
+</tr>
+</table>
+<ul class="metrics" id="metrics_foldinglist" style="padding-left: 0px;">
+<table width="100%" class="details" cellpadding="0" cellspacing="0" style="overflow:hidden;">
+<tr class="alternated">
+<td style="width:40%" class="tree" align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;com.parasoft:project-with-default-package</td>
+<td align="center" width="12%">6</td>
+<td align="center" width="12%">1</td>
+<td align="center" width="12%">0</td>
+<td align="center" width="12%">1</td>
+<td align="center" width="12%">1</td>
+</tr>
+</table>
+<ul class="metrics" id="metrics_foldinglist" style="padding-left: 0px;"></ul><br></ul>
+<table id="metrics_foldheader" width="100%" class="details" cellpadding="0" cellspacing="0">
+<tr>
+<td align="left" border="0" bordercolor="#CBCBCB" width="40%"><font color="#CCCCCC">+</font>&nbsp;<b>Lack of Cohesion</b>&nbsp;<font class="gray">(METRIC.LCOM)</font></td>
+<td align="center" width="12%"><b>11</b></td>
+<td align="center" width="12%"><b>0.023</b></td>
+<td align="center" width="12%"><b>0.072</b></td>
+<td align="center" width="12%"><b>0.25</b></td>
+<td align="center" width="12%"><b>0</b></td>
+</tr>
+</table>
+<ul class="metrics" id="metrics_foldinglist" style="padding-left: 0px;">
+<table width="100%" class="details" cellpadding="0" cellspacing="0" style="overflow:hidden;">
+<tr>
+<td style="width:40%" class="tree" align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;com.parasoft:project-with-default-package</td>
+<td align="center" width="12%">11</td>
+<td align="center" width="12%">0.023</td>
+<td align="center" width="12%">0.072</td>
+<td align="center" width="12%">0.25</td>
+<td align="center" width="12%">0</td>
+</tr>
+</table>
+<ul class="metrics" id="metrics_foldinglist" style="padding-left: 0px;"></ul><br></ul>
+<table id="metrics_foldheader" width="100%" class="details" cellpadding="0" cellspacing="0">
+<tr>
+<td align="left" border="0" bordercolor="#CBCBCB" width="40%"><font color="#CCCCCC">+</font>&nbsp;<b>Modified Cyclomatic Complexity</b>&nbsp;<font class="gray">(METRIC.MCC)</font></td>
+<td align="center" width="12%"><b>17</b></td>
+<td align="center" width="12%"><b>1</b></td>
+<td align="center" width="12%"><b>0</b></td>
+<td align="center" width="12%"><b>1</b></td>
+<td align="center" width="12%"><b>1</b></td>
+</tr>
+</table>
+<ul class="metrics" id="metrics_foldinglist" style="padding-left: 0px;">
+<table width="100%" class="details" cellpadding="0" cellspacing="0" style="overflow:hidden;">
+<tr class="alternated">
+<td style="width:40%" class="tree" align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;com.parasoft:project-with-default-package</td>
+<td align="center" width="12%">17</td>
+<td align="center" width="12%">1</td>
+<td align="center" width="12%">0</td>
+<td align="center" width="12%">1</td>
+<td align="center" width="12%">1</td>
+</tr>
+</table>
+<ul class="metrics" id="metrics_foldinglist" style="padding-left: 0px;"></ul><br></ul>
+<table id="metrics_foldheader" width="100%" class="details" cellpadding="0" cellspacing="0">
+<tr>
+<td align="left" border="0" bordercolor="#CBCBCB" width="40%"><font color="#CCCCCC">+</font>&nbsp;<b>Maintainability Index</b>&nbsp;<font class="gray">(METRIC.MI)</font></td>
+<td align="center" width="12%"><b>6</b></td>
+<td align="center" width="12%"><b>131.02</b></td>
+<td align="center" width="12%"><b>4.201</b></td>
+<td align="center" width="12%"><b>133.922</b></td>
+<td align="center" width="12%"><b>121.719</b></td>
+</tr>
+</table>
+<ul class="metrics" id="metrics_foldinglist" style="padding-left: 0px;">
+<table width="100%" class="details" cellpadding="0" cellspacing="0" style="overflow:hidden;">
+<tr>
+<td style="width:40%" class="tree" align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;com.parasoft:project-with-default-package</td>
+<td align="center" width="12%">6</td>
+<td align="center" width="12%">131.02</td>
+<td align="center" width="12%">4.201</td>
+<td align="center" width="12%">133.922</td>
+<td align="center" width="12%">121.719</td>
+</tr>
+</table>
+<ul class="metrics" id="metrics_foldinglist" style="padding-left: 0px;"></ul><br></ul>
+<table id="metrics_foldheader" width="100%" class="details" cellpadding="0" cellspacing="0">
+<tr>
+<td align="left" border="0" bordercolor="#CBCBCB" width="40%"><font color="#CCCCCC">+</font>&nbsp;<b>Nested Blocks Depth</b>&nbsp;<font class="gray">(METRIC.NBD)</font></td>
+<td align="center" width="12%"><b>17</b></td>
+<td align="center" width="12%"><b>0</b></td>
+<td align="center" width="12%"><b>0</b></td>
+<td align="center" width="12%"><b>0</b></td>
+<td align="center" width="12%"><b>0</b></td>
+</tr>
+</table>
+<ul class="metrics" id="metrics_foldinglist" style="padding-left: 0px;">
+<table width="100%" class="details" cellpadding="0" cellspacing="0" style="overflow:hidden;">
+<tr class="alternated">
+<td style="width:40%" class="tree" align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;com.parasoft:project-with-default-package</td>
+<td align="center" width="12%">17</td>
+<td align="center" width="12%">0</td>
+<td align="center" width="12%">0</td>
+<td align="center" width="12%">0</td>
+<td align="center" width="12%">0</td>
+</tr>
+</table>
+<ul class="metrics" id="metrics_foldinglist" style="padding-left: 0px;"></ul><br></ul>
+<table id="metrics_foldheader" width="100%" class="details" cellpadding="0" cellspacing="0">
+<tr>
+<td align="left" border="0" bordercolor="#CBCBCB" width="40%"><font color="#CCCCCC">+</font>&nbsp;<b>Blank Lines in Files</b>&nbsp;<font class="gray">(METRIC.NOBLIF)</font></td>
+<td align="center" width="12%"><b>6</b></td>
+<td align="center" width="12%"><b>4.333</b></td>
+<td align="center" width="12%"><b>3.815</b></td>
+<td align="center" width="12%"><b>12</b></td>
+<td align="center" width="12%"><b>1</b></td>
+</tr>
+</table>
+<ul class="metrics" id="metrics_foldinglist" style="padding-left: 0px;">
+<table width="100%" class="details" cellpadding="0" cellspacing="0" style="overflow:hidden;">
+<tr>
+<td style="width:40%" class="tree" align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;com.parasoft:project-with-default-package</td>
+<td align="center" width="12%">6</td>
+<td align="center" width="12%">4.333</td>
+<td align="center" width="12%">3.815</td>
+<td align="center" width="12%">12</td>
+<td align="center" width="12%">1</td>
+</tr>
+</table>
+<ul class="metrics" id="metrics_foldinglist" style="padding-left: 0px;"></ul><br></ul>
+<table id="metrics_foldheader" width="100%" class="details" cellpadding="0" cellspacing="0">
+<tr>
+<td align="left" border="0" bordercolor="#CBCBCB" width="40%"><font color="#CCCCCC">+</font>&nbsp;<b>Blank Lines in Methods</b>&nbsp;<font class="gray">(METRIC.NOBLIM)</font></td>
+<td align="center" width="12%"><b>17</b></td>
+<td align="center" width="12%"><b>0</b></td>
+<td align="center" width="12%"><b>0</b></td>
+<td align="center" width="12%"><b>0</b></td>
+<td align="center" width="12%"><b>0</b></td>
+</tr>
+</table>
+<ul class="metrics" id="metrics_foldinglist" style="padding-left: 0px;">
+<table width="100%" class="details" cellpadding="0" cellspacing="0" style="overflow:hidden;">
+<tr class="alternated">
+<td style="width:40%" class="tree" align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;com.parasoft:project-with-default-package</td>
+<td align="center" width="12%">17</td>
+<td align="center" width="12%">0</td>
+<td align="center" width="12%">0</td>
+<td align="center" width="12%">0</td>
+<td align="center" width="12%">0</td>
+</tr>
+</table>
+<ul class="metrics" id="metrics_foldinglist" style="padding-left: 0px;"></ul><br></ul>
+<table id="metrics_foldheader" width="100%" class="details" cellpadding="0" cellspacing="0">
+<tr>
+<td align="left" border="0" bordercolor="#CBCBCB" width="40%"><font color="#CCCCCC">+</font>&nbsp;<b>Blank Lines in Types</b>&nbsp;<font class="gray">(METRIC.NOBLIT)</font></td>
+<td align="center" width="12%"><b>11</b></td>
+<td align="center" width="12%"><b>1.545</b></td>
+<td align="center" width="12%"><b>1.924</b></td>
+<td align="center" width="12%"><b>6</b></td>
+<td align="center" width="12%"><b>0</b></td>
+</tr>
+</table>
+<ul class="metrics" id="metrics_foldinglist" style="padding-left: 0px;">
+<table width="100%" class="details" cellpadding="0" cellspacing="0" style="overflow:hidden;">
+<tr>
+<td style="width:40%" class="tree" align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;com.parasoft:project-with-default-package</td>
+<td align="center" width="12%">11</td>
+<td align="center" width="12%">1.545</td>
+<td align="center" width="12%">1.924</td>
+<td align="center" width="12%">6</td>
+<td align="center" width="12%">0</td>
+</tr>
+</table>
+<ul class="metrics" id="metrics_foldinglist" style="padding-left: 0px;"></ul><br></ul>
+<table id="metrics_foldheader" width="100%" class="details" cellpadding="0" cellspacing="0">
+<tr>
+<td align="left" border="0" bordercolor="#CBCBCB" width="40%"><font color="#CCCCCC">+</font>&nbsp;<b>Number of Classes</b>&nbsp;<font class="gray">(METRIC.NOC)</font></td>
+<td align="center" width="12%"><b>6</b></td>
+<td align="center" width="12%"><b>1</b></td>
+<td align="center" width="12%"><b>0</b></td>
+<td align="center" width="12%"><b>1</b></td>
+<td align="center" width="12%"><b>1</b></td>
+</tr>
+</table>
+<ul class="metrics" id="metrics_foldinglist" style="padding-left: 0px;">
+<table width="100%" class="details" cellpadding="0" cellspacing="0" style="overflow:hidden;">
+<tr class="alternated">
+<td style="width:40%" class="tree" align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;com.parasoft:project-with-default-package</td>
+<td align="center" width="12%">6</td>
+<td align="center" width="12%">1</td>
+<td align="center" width="12%">0</td>
+<td align="center" width="12%">1</td>
+<td align="center" width="12%">1</td>
+</tr>
+</table>
+<ul class="metrics" id="metrics_foldinglist" style="padding-left: 0px;"></ul><br></ul>
+<table id="metrics_foldheader" width="100%" class="details" cellpadding="0" cellspacing="0">
+<tr>
+<td align="left" border="0" bordercolor="#CBCBCB" width="40%"><font color="#CCCCCC">+</font>&nbsp;<b>Comment Lines in Files</b>&nbsp;<font class="gray">(METRIC.NOCLIF)</font></td>
+<td align="center" width="12%"><b>6</b></td>
+<td align="center" width="12%"><b>0</b></td>
+<td align="center" width="12%"><b>0</b></td>
+<td align="center" width="12%"><b>0</b></td>
+<td align="center" width="12%"><b>0</b></td>
+</tr>
+</table>
+<ul class="metrics" id="metrics_foldinglist" style="padding-left: 0px;">
+<table width="100%" class="details" cellpadding="0" cellspacing="0" style="overflow:hidden;">
+<tr>
+<td style="width:40%" class="tree" align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;com.parasoft:project-with-default-package</td>
+<td align="center" width="12%">6</td>
+<td align="center" width="12%">0</td>
+<td align="center" width="12%">0</td>
+<td align="center" width="12%">0</td>
+<td align="center" width="12%">0</td>
+</tr>
+</table>
+<ul class="metrics" id="metrics_foldinglist" style="padding-left: 0px;"></ul><br></ul>
+<table id="metrics_foldheader" width="100%" class="details" cellpadding="0" cellspacing="0">
+<tr>
+<td align="left" border="0" bordercolor="#CBCBCB" width="40%"><font color="#CCCCCC">+</font>&nbsp;<b>Comment Lines in Methods</b>&nbsp;<font class="gray">(METRIC.NOCLIM)</font></td>
+<td align="center" width="12%"><b>17</b></td>
+<td align="center" width="12%"><b>0</b></td>
+<td align="center" width="12%"><b>0</b></td>
+<td align="center" width="12%"><b>0</b></td>
+<td align="center" width="12%"><b>0</b></td>
+</tr>
+</table>
+<ul class="metrics" id="metrics_foldinglist" style="padding-left: 0px;">
+<table width="100%" class="details" cellpadding="0" cellspacing="0" style="overflow:hidden;">
+<tr class="alternated">
+<td style="width:40%" class="tree" align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;com.parasoft:project-with-default-package</td>
+<td align="center" width="12%">17</td>
+<td align="center" width="12%">0</td>
+<td align="center" width="12%">0</td>
+<td align="center" width="12%">0</td>
+<td align="center" width="12%">0</td>
+</tr>
+</table>
+<ul class="metrics" id="metrics_foldinglist" style="padding-left: 0px;"></ul><br></ul>
+<table id="metrics_foldheader" width="100%" class="details" cellpadding="0" cellspacing="0">
+<tr>
+<td align="left" border="0" bordercolor="#CBCBCB" width="40%"><font color="#CCCCCC">+</font>&nbsp;<b>Comment Lines in Types</b>&nbsp;<font class="gray">(METRIC.NOCLIT)</font></td>
+<td align="center" width="12%"><b>11</b></td>
+<td align="center" width="12%"><b>0</b></td>
+<td align="center" width="12%"><b>0</b></td>
+<td align="center" width="12%"><b>0</b></td>
+<td align="center" width="12%"><b>0</b></td>
+</tr>
+</table>
+<ul class="metrics" id="metrics_foldinglist" style="padding-left: 0px;">
+<table width="100%" class="details" cellpadding="0" cellspacing="0" style="overflow:hidden;">
+<tr>
+<td style="width:40%" class="tree" align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;com.parasoft:project-with-default-package</td>
+<td align="center" width="12%">11</td>
+<td align="center" width="12%">0</td>
+<td align="center" width="12%">0</td>
+<td align="center" width="12%">0</td>
+<td align="center" width="12%">0</td>
+</tr>
+</table>
+<ul class="metrics" id="metrics_foldinglist" style="padding-left: 0px;"></ul><br></ul>
+<table id="metrics_foldheader" width="100%" class="details" cellpadding="0" cellspacing="0">
+<tr>
+<td align="left" border="0" bordercolor="#CBCBCB" width="40%"><font color="#CCCCCC">+</font>&nbsp;<b>Number of Files</b>&nbsp;<font class="gray">(METRIC.NOF)</font></td>
+<td align="center" width="12%"><b>6</b></td>
+<td align="center" width="12%"><b>1</b></td>
+<td align="center" width="12%"><b>0</b></td>
+<td align="center" width="12%"><b>1</b></td>
+<td align="center" width="12%"><b>1</b></td>
+</tr>
+</table>
+<ul class="metrics" id="metrics_foldinglist" style="padding-left: 0px;">
+<table width="100%" class="details" cellpadding="0" cellspacing="0" style="overflow:hidden;">
+<tr class="alternated">
+<td style="width:40%" class="tree" align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;com.parasoft:project-with-default-package</td>
+<td align="center" width="12%">6</td>
+<td align="center" width="12%">1</td>
+<td align="center" width="12%">0</td>
+<td align="center" width="12%">1</td>
+<td align="center" width="12%">1</td>
+</tr>
+</table>
+<ul class="metrics" id="metrics_foldinglist" style="padding-left: 0px;"></ul><br></ul>
+<table id="metrics_foldheader" width="100%" class="details" cellpadding="0" cellspacing="0">
+<tr>
+<td align="left" border="0" bordercolor="#CBCBCB" width="40%"><font color="#CCCCCC">+</font>&nbsp;<b>Logical Lines in Files</b>&nbsp;<font class="gray">(METRIC.NOLLOCIF)</font></td>
+<td align="center" width="12%"><b>6</b></td>
+<td align="center" width="12%"><b>3.667</b></td>
+<td align="center" width="12%"><b>3.037</b></td>
+<td align="center" width="12%"><b>9</b></td>
+<td align="center" width="12%"><b>0</b></td>
+</tr>
+</table>
+<ul class="metrics" id="metrics_foldinglist" style="padding-left: 0px;">
+<table width="100%" class="details" cellpadding="0" cellspacing="0" style="overflow:hidden;">
+<tr>
+<td style="width:40%" class="tree" align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;com.parasoft:project-with-default-package</td>
+<td align="center" width="12%">6</td>
+<td align="center" width="12%">3.667</td>
+<td align="center" width="12%">3.037</td>
+<td align="center" width="12%">9</td>
+<td align="center" width="12%">0</td>
+</tr>
+</table>
+<ul class="metrics" id="metrics_foldinglist" style="padding-left: 0px;"></ul><br></ul>
+<table id="metrics_foldheader" width="100%" class="details" cellpadding="0" cellspacing="0">
+<tr>
+<td align="left" border="0" bordercolor="#CBCBCB" width="40%"><font color="#CCCCCC">+</font>&nbsp;<b>Logical Lines in Methods</b>&nbsp;<font class="gray">(METRIC.NOLLOCIM)</font></td>
+<td align="center" width="12%"><b>17</b></td>
+<td align="center" width="12%"><b>1.235</b></td>
+<td align="center" width="12%"><b>0.73</b></td>
+<td align="center" width="12%"><b>3</b></td>
+<td align="center" width="12%"><b>0</b></td>
+</tr>
+</table>
+<ul class="metrics" id="metrics_foldinglist" style="padding-left: 0px;">
+<table width="100%" class="details" cellpadding="0" cellspacing="0" style="overflow:hidden;">
+<tr class="alternated">
+<td style="width:40%" class="tree" align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;com.parasoft:project-with-default-package</td>
+<td align="center" width="12%">17</td>
+<td align="center" width="12%">1.235</td>
+<td align="center" width="12%">0.73</td>
+<td align="center" width="12%">3</td>
+<td align="center" width="12%">0</td>
+</tr>
+</table>
+<ul class="metrics" id="metrics_foldinglist" style="padding-left: 0px;"></ul><br></ul>
+<table id="metrics_foldheader" width="100%" class="details" cellpadding="0" cellspacing="0">
+<tr>
+<td align="left" border="0" bordercolor="#CBCBCB" width="40%"><font color="#CCCCCC">+</font>&nbsp;<b>Logical Lines in Types</b>&nbsp;<font class="gray">(METRIC.NOLLOCIT)</font></td>
+<td align="center" width="12%"><b>11</b></td>
+<td align="center" width="12%"><b>2</b></td>
+<td align="center" width="12%"><b>2.335</b></td>
+<td align="center" width="12%"><b>8</b></td>
+<td align="center" width="12%"><b>0</b></td>
+</tr>
+</table>
+<ul class="metrics" id="metrics_foldinglist" style="padding-left: 0px;">
+<table width="100%" class="details" cellpadding="0" cellspacing="0" style="overflow:hidden;">
+<tr>
+<td style="width:40%" class="tree" align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;com.parasoft:project-with-default-package</td>
+<td align="center" width="12%">11</td>
+<td align="center" width="12%">2</td>
+<td align="center" width="12%">2.335</td>
+<td align="center" width="12%">8</td>
+<td align="center" width="12%">0</td>
+</tr>
+</table>
+<ul class="metrics" id="metrics_foldinglist" style="padding-left: 0px;"></ul><br></ul>
+<table id="metrics_foldheader" width="100%" class="details" cellpadding="0" cellspacing="0">
+<tr>
+<td align="left" border="0" bordercolor="#CBCBCB" width="40%"><font color="#CCCCCC">+</font>&nbsp;<b>Number of Methods in Types</b>&nbsp;<font class="gray">(METRIC.NOMIT)</font></td>
+<td align="center" width="12%"><b>11</b></td>
+<td align="center" width="12%"><b>1.545</b></td>
+<td align="center" width="12%"><b>1.559</b></td>
+<td align="center" width="12%"><b>6</b></td>
+<td align="center" width="12%"><b>0</b></td>
+</tr>
+</table>
+<ul class="metrics" id="metrics_foldinglist" style="padding-left: 0px;">
+<table width="100%" class="details" cellpadding="0" cellspacing="0" style="overflow:hidden;">
+<tr class="alternated">
+<td style="width:40%" class="tree" align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;com.parasoft:project-with-default-package</td>
+<td align="center" width="12%">11</td>
+<td align="center" width="12%">1.545</td>
+<td align="center" width="12%">1.559</td>
+<td align="center" width="12%">6</td>
+<td align="center" width="12%">0</td>
+</tr>
+</table>
+<ul class="metrics" id="metrics_foldinglist" style="padding-left: 0px;"></ul><br></ul>
+<table id="metrics_foldheader" width="100%" class="details" cellpadding="0" cellspacing="0">
+<tr>
+<td align="left" border="0" bordercolor="#CBCBCB" width="40%"><font color="#CCCCCC">+</font>&nbsp;<b>Parameters of Methods</b>&nbsp;<font class="gray">(METRIC.NOPAR)</font></td>
+<td align="center" width="12%"><b>17</b></td>
+<td align="center" width="12%"><b>0.588</b></td>
+<td align="center" width="12%"><b>0.771</b></td>
+<td align="center" width="12%"><b>2</b></td>
+<td align="center" width="12%"><b>0</b></td>
+</tr>
+</table>
+<ul class="metrics" id="metrics_foldinglist" style="padding-left: 0px;">
+<table width="100%" class="details" cellpadding="0" cellspacing="0" style="overflow:hidden;">
+<tr>
+<td style="width:40%" class="tree" align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;com.parasoft:project-with-default-package</td>
+<td align="center" width="12%">17</td>
+<td align="center" width="12%">0.588</td>
+<td align="center" width="12%">0.771</td>
+<td align="center" width="12%">2</td>
+<td align="center" width="12%">0</td>
+</tr>
+</table>
+<ul class="metrics" id="metrics_foldinglist" style="padding-left: 0px;"></ul><br></ul>
+<table id="metrics_foldheader" width="100%" class="details" cellpadding="0" cellspacing="0">
+<tr>
+<td align="left" border="0" bordercolor="#CBCBCB" width="40%"><font color="#CCCCCC">+</font>&nbsp;<b>Physical Lines in Files</b>&nbsp;<font class="gray">(METRIC.NOPLIF)</font></td>
+<td align="center" width="12%"><b>6</b></td>
+<td align="center" width="12%"><b>19.5</b></td>
+<td align="center" width="12%"><b>15.349</b></td>
+<td align="center" width="12%"><b>50</b></td>
+<td align="center" width="12%"><b>5</b></td>
+</tr>
+</table>
+<ul class="metrics" id="metrics_foldinglist" style="padding-left: 0px;">
+<table width="100%" class="details" cellpadding="0" cellspacing="0" style="overflow:hidden;">
+<tr class="alternated">
+<td style="width:40%" class="tree" align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;com.parasoft:project-with-default-package</td>
+<td align="center" width="12%">6</td>
+<td align="center" width="12%">19.5</td>
+<td align="center" width="12%">15.349</td>
+<td align="center" width="12%">50</td>
+<td align="center" width="12%">5</td>
+</tr>
+</table>
+<ul class="metrics" id="metrics_foldinglist" style="padding-left: 0px;"></ul><br></ul>
+<table id="metrics_foldheader" width="100%" class="details" cellpadding="0" cellspacing="0">
+<tr>
+<td align="left" border="0" bordercolor="#CBCBCB" width="40%"><font color="#CCCCCC">+</font>&nbsp;<b>Physical Lines in Methods</b>&nbsp;<font class="gray">(METRIC.NOPLIM)</font></td>
+<td align="center" width="12%"><b>17</b></td>
+<td align="center" width="12%"><b>3.118</b></td>
+<td align="center" width="12%"><b>0.963</b></td>
+<td align="center" width="12%"><b>5</b></td>
+<td align="center" width="12%"><b>1</b></td>
+</tr>
+</table>
+<ul class="metrics" id="metrics_foldinglist" style="padding-left: 0px;">
+<table width="100%" class="details" cellpadding="0" cellspacing="0" style="overflow:hidden;">
+<tr>
+<td style="width:40%" class="tree" align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;com.parasoft:project-with-default-package</td>
+<td align="center" width="12%">17</td>
+<td align="center" width="12%">3.118</td>
+<td align="center" width="12%">0.963</td>
+<td align="center" width="12%">5</td>
+<td align="center" width="12%">1</td>
+</tr>
+</table>
+<ul class="metrics" id="metrics_foldinglist" style="padding-left: 0px;"></ul><br></ul>
+<table id="metrics_foldheader" width="100%" class="details" cellpadding="0" cellspacing="0">
+<tr>
+<td align="left" border="0" bordercolor="#CBCBCB" width="40%"><font color="#CCCCCC">+</font>&nbsp;<b>Physical Lines in Types</b>&nbsp;<font class="gray">(METRIC.NOPLIT)</font></td>
+<td align="center" width="12%"><b>11</b></td>
+<td align="center" width="12%"><b>8.909</b></td>
+<td align="center" width="12%"><b>7.465</b></td>
+<td align="center" width="12%"><b>30</b></td>
+<td align="center" width="12%"><b>3</b></td>
+</tr>
+</table>
+<ul class="metrics" id="metrics_foldinglist" style="padding-left: 0px;">
+<table width="100%" class="details" cellpadding="0" cellspacing="0" style="overflow:hidden;">
+<tr class="alternated">
+<td style="width:40%" class="tree" align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;com.parasoft:project-with-default-package</td>
+<td align="center" width="12%">11</td>
+<td align="center" width="12%">8.909</td>
+<td align="center" width="12%">7.465</td>
+<td align="center" width="12%">30</td>
+<td align="center" width="12%">3</td>
+</tr>
+</table>
+<ul class="metrics" id="metrics_foldinglist" style="padding-left: 0px;"></ul><br></ul>
+<table id="metrics_foldheader" width="100%" class="details" cellpadding="0" cellspacing="0">
+<tr>
+<td align="left" border="0" bordercolor="#CBCBCB" width="40%"><font color="#CCCCCC">+</font>&nbsp;<b>Private Members of Types</b>&nbsp;<font class="gray">(METRIC.NOPRIVMIT)</font></td>
+<td align="center" width="12%"><b>11</b></td>
+<td align="center" width="12%"><b>0.364</b></td>
+<td align="center" width="12%"><b>0.643</b></td>
+<td align="center" width="12%"><b>2</b></td>
+<td align="center" width="12%"><b>0</b></td>
+</tr>
+</table>
+<ul class="metrics" id="metrics_foldinglist" style="padding-left: 0px;">
+<table width="100%" class="details" cellpadding="0" cellspacing="0" style="overflow:hidden;">
+<tr>
+<td style="width:40%" class="tree" align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;com.parasoft:project-with-default-package</td>
+<td align="center" width="12%">11</td>
+<td align="center" width="12%">0.364</td>
+<td align="center" width="12%">0.643</td>
+<td align="center" width="12%">2</td>
+<td align="center" width="12%">0</td>
+</tr>
+</table>
+<ul class="metrics" id="metrics_foldinglist" style="padding-left: 0px;"></ul><br></ul>
+<table id="metrics_foldheader" width="100%" class="details" cellpadding="0" cellspacing="0">
+<tr>
+<td align="left" border="0" bordercolor="#CBCBCB" width="40%"><font color="#CCCCCC">+</font>&nbsp;<b>Protected Members of Types</b>&nbsp;<font class="gray">(METRIC.NOPROTMIT)</font></td>
+<td align="center" width="12%"><b>11</b></td>
+<td align="center" width="12%"><b>0</b></td>
+<td align="center" width="12%"><b>0</b></td>
+<td align="center" width="12%"><b>0</b></td>
+<td align="center" width="12%"><b>0</b></td>
+</tr>
+</table>
+<ul class="metrics" id="metrics_foldinglist" style="padding-left: 0px;">
+<table width="100%" class="details" cellpadding="0" cellspacing="0" style="overflow:hidden;">
+<tr class="alternated">
+<td style="width:40%" class="tree" align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;com.parasoft:project-with-default-package</td>
+<td align="center" width="12%">11</td>
+<td align="center" width="12%">0</td>
+<td align="center" width="12%">0</td>
+<td align="center" width="12%">0</td>
+<td align="center" width="12%">0</td>
+</tr>
+</table>
+<ul class="metrics" id="metrics_foldinglist" style="padding-left: 0px;"></ul><br></ul>
+<table id="metrics_foldheader" width="100%" class="details" cellpadding="0" cellspacing="0">
+<tr>
+<td align="left" border="0" bordercolor="#CBCBCB" width="40%"><font color="#CCCCCC">+</font>&nbsp;<b>Public Members of Types</b>&nbsp;<font class="gray">(METRIC.NOPUBMIT)</font></td>
+<td align="center" width="12%"><b>11</b></td>
+<td align="center" width="12%"><b>2.273</b></td>
+<td align="center" width="12%"><b>1.763</b></td>
+<td align="center" width="12%"><b>6</b></td>
+<td align="center" width="12%"><b>0</b></td>
+</tr>
+</table>
+<ul class="metrics" id="metrics_foldinglist" style="padding-left: 0px;">
+<table width="100%" class="details" cellpadding="0" cellspacing="0" style="overflow:hidden;">
+<tr>
+<td style="width:40%" class="tree" align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;com.parasoft:project-with-default-package</td>
+<td align="center" width="12%">11</td>
+<td align="center" width="12%">2.273</td>
+<td align="center" width="12%">1.763</td>
+<td align="center" width="12%">6</td>
+<td align="center" width="12%">0</td>
+</tr>
+</table>
+<ul class="metrics" id="metrics_foldinglist" style="padding-left: 0px;"></ul><br></ul>
+<table id="metrics_foldheader" width="100%" class="details" cellpadding="0" cellspacing="0">
+<tr>
+<td align="left" border="0" bordercolor="#CBCBCB" width="40%"><font color="#CCCCCC">+</font>&nbsp;<b>Number of Returns in Methods</b>&nbsp;<font class="gray">(METRIC.NORET)</font></td>
+<td align="center" width="12%"><b>17</b></td>
+<td align="center" width="12%"><b>0.588</b></td>
+<td align="center" width="12%"><b>0.492</b></td>
+<td align="center" width="12%"><b>1</b></td>
+<td align="center" width="12%"><b>0</b></td>
+</tr>
+</table>
+<ul class="metrics" id="metrics_foldinglist" style="padding-left: 0px;">
+<table width="100%" class="details" cellpadding="0" cellspacing="0" style="overflow:hidden;">
+<tr class="alternated">
+<td style="width:40%" class="tree" align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;com.parasoft:project-with-default-package</td>
+<td align="center" width="12%">17</td>
+<td align="center" width="12%">0.588</td>
+<td align="center" width="12%">0.492</td>
+<td align="center" width="12%">1</td>
+<td align="center" width="12%">0</td>
+</tr>
+</table>
+<ul class="metrics" id="metrics_foldinglist" style="padding-left: 0px;"></ul><br></ul>
+<table id="metrics_foldheader" width="100%" class="details" cellpadding="0" cellspacing="0">
+<tr>
+<td align="left" border="0" bordercolor="#CBCBCB" width="40%"><font color="#CCCCCC">+</font>&nbsp;<b>Source Lines in Files</b>&nbsp;<font class="gray">(METRIC.NOSLIF)</font></td>
+<td align="center" width="12%"><b>6</b></td>
+<td align="center" width="12%"><b>15.167</b></td>
+<td align="center" width="12%"><b>11.539</b></td>
+<td align="center" width="12%"><b>38</b></td>
+<td align="center" width="12%"><b>4</b></td>
+</tr>
+</table>
+<ul class="metrics" id="metrics_foldinglist" style="padding-left: 0px;">
+<table width="100%" class="details" cellpadding="0" cellspacing="0" style="overflow:hidden;">
+<tr>
+<td style="width:40%" class="tree" align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;com.parasoft:project-with-default-package</td>
+<td align="center" width="12%">6</td>
+<td align="center" width="12%">15.167</td>
+<td align="center" width="12%">11.539</td>
+<td align="center" width="12%">38</td>
+<td align="center" width="12%">4</td>
+</tr>
+</table>
+<ul class="metrics" id="metrics_foldinglist" style="padding-left: 0px;"></ul><br></ul>
+<table id="metrics_foldheader" width="100%" class="details" cellpadding="0" cellspacing="0">
+<tr>
+<td align="left" border="0" bordercolor="#CBCBCB" width="40%"><font color="#CCCCCC">+</font>&nbsp;<b>Source Lines in Methods</b>&nbsp;<font class="gray">(METRIC.NOSLIM)</font></td>
+<td align="center" width="12%"><b>17</b></td>
+<td align="center" width="12%"><b>3.118</b></td>
+<td align="center" width="12%"><b>0.963</b></td>
+<td align="center" width="12%"><b>5</b></td>
+<td align="center" width="12%"><b>1</b></td>
+</tr>
+</table>
+<ul class="metrics" id="metrics_foldinglist" style="padding-left: 0px;">
+<table width="100%" class="details" cellpadding="0" cellspacing="0" style="overflow:hidden;">
+<tr class="alternated">
+<td style="width:40%" class="tree" align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;com.parasoft:project-with-default-package</td>
+<td align="center" width="12%">17</td>
+<td align="center" width="12%">3.118</td>
+<td align="center" width="12%">0.963</td>
+<td align="center" width="12%">5</td>
+<td align="center" width="12%">1</td>
+</tr>
+</table>
+<ul class="metrics" id="metrics_foldinglist" style="padding-left: 0px;"></ul><br></ul>
+<table id="metrics_foldheader" width="100%" class="details" cellpadding="0" cellspacing="0">
+<tr>
+<td align="left" border="0" bordercolor="#CBCBCB" width="40%"><font color="#CCCCCC">+</font>&nbsp;<b>Source Lines in Types</b>&nbsp;<font class="gray">(METRIC.NOSLIT)</font></td>
+<td align="center" width="12%"><b>11</b></td>
+<td align="center" width="12%"><b>7.364</b></td>
+<td align="center" width="12%"><b>5.82</b></td>
+<td align="center" width="12%"><b>24</b></td>
+<td align="center" width="12%"><b>3</b></td>
+</tr>
+</table>
+<ul class="metrics" id="metrics_foldinglist" style="padding-left: 0px;">
+<table width="100%" class="details" cellpadding="0" cellspacing="0" style="overflow:hidden;">
+<tr>
+<td style="width:40%" class="tree" align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;com.parasoft:project-with-default-package</td>
+<td align="center" width="12%">11</td>
+<td align="center" width="12%">7.364</td>
+<td align="center" width="12%">5.82</td>
+<td align="center" width="12%">24</td>
+<td align="center" width="12%">3</td>
+</tr>
+</table>
+<ul class="metrics" id="metrics_foldinglist" style="padding-left: 0px;"></ul><br></ul>
+<table id="metrics_foldheader" width="100%" class="details" cellpadding="0" cellspacing="0">
+<tr>
+<td align="left" border="0" bordercolor="#CBCBCB" width="40%"><font color="#CCCCCC">+</font>&nbsp;<b>Number of Types</b>&nbsp;<font class="gray">(METRIC.NOT)</font></td>
+<td align="center" width="12%"><b>11</b></td>
+<td align="center" width="12%"><b>1</b></td>
+<td align="center" width="12%"><b>0</b></td>
+<td align="center" width="12%"><b>1</b></td>
+<td align="center" width="12%"><b>1</b></td>
+</tr>
+</table>
+<ul class="metrics" id="metrics_foldinglist" style="padding-left: 0px;">
+<table width="100%" class="details" cellpadding="0" cellspacing="0" style="overflow:hidden;">
+<tr class="alternated">
+<td style="width:40%" class="tree" align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;com.parasoft:project-with-default-package</td>
+<td align="center" width="12%">11</td>
+<td align="center" width="12%">1</td>
+<td align="center" width="12%">0</td>
+<td align="center" width="12%">1</td>
+<td align="center" width="12%">1</td>
+</tr>
+</table>
+<ul class="metrics" id="metrics_foldinglist" style="padding-left: 0px;"></ul><br></ul>
+<table id="metrics_foldheader" width="100%" class="details" cellpadding="0" cellspacing="0">
+<tr>
+<td align="left" border="0" bordercolor="#CBCBCB" width="40%"><font color="#CCCCCC">+</font>&nbsp;<b>Response for Class</b>&nbsp;<font class="gray">(METRIC.RFC)</font></td>
+<td align="center" width="12%"><b>11</b></td>
+<td align="center" width="12%"><b>2.182</b></td>
+<td align="center" width="12%"><b>1.946</b></td>
+<td align="center" width="12%"><b>7</b></td>
+<td align="center" width="12%"><b>0</b></td>
+</tr>
+</table>
+<ul class="metrics" id="metrics_foldinglist" style="padding-left: 0px;">
+<table width="100%" class="details" cellpadding="0" cellspacing="0" style="overflow:hidden;">
+<tr>
+<td style="width:40%" class="tree" align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;com.parasoft:project-with-default-package</td>
+<td align="center" width="12%">11</td>
+<td align="center" width="12%">2.182</td>
+<td align="center" width="12%">1.946</td>
+<td align="center" width="12%">7</td>
+<td align="center" width="12%">0</td>
+</tr>
+</table>
+<ul class="metrics" id="metrics_foldinglist" style="padding-left: 0px;"></ul><br></ul>
+<table id="metrics_foldheader" width="100%" class="details" cellpadding="0" cellspacing="0">
+<tr>
+<td align="left" border="0" bordercolor="#CBCBCB" width="40%"><font color="#CCCCCC">+</font>&nbsp;<b>Strict Cyclomatic Complexity</b>&nbsp;<font class="gray">(METRIC.SCC)</font></td>
+<td align="center" width="12%"><b>17</b></td>
+<td align="center" width="12%"><b>1</b></td>
+<td align="center" width="12%"><b>0</b></td>
+<td align="center" width="12%"><b>1</b></td>
+<td align="center" width="12%"><b>1</b></td>
+</tr>
+</table>
+<ul class="metrics" id="metrics_foldinglist" style="padding-left: 0px;">
+<table width="100%" class="details" cellpadding="0" cellspacing="0" style="overflow:hidden;">
+<tr class="alternated">
+<td style="width:40%" class="tree" align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;com.parasoft:project-with-default-package</td>
+<td align="center" width="12%">17</td>
+<td align="center" width="12%">1</td>
+<td align="center" width="12%">0</td>
+<td align="center" width="12%">1</td>
+<td align="center" width="12%">1</td>
+</tr>
+</table>
+<ul class="metrics" id="metrics_foldinglist" style="padding-left: 0px;"></ul><br></ul>
+<table id="metrics_foldheader" width="100%" class="details" cellpadding="0" cellspacing="0">
+<tr>
+<td align="left" border="0" bordercolor="#CBCBCB" width="40%"><font color="#CCCCCC">+</font>&nbsp;<b>Weighted Methods of Class</b>&nbsp;<font class="gray">(METRIC.WMC)</font></td>
+<td align="center" width="12%"><b>11</b></td>
+<td align="center" width="12%"><b>1.545</b></td>
+<td align="center" width="12%"><b>1.559</b></td>
+<td align="center" width="12%"><b>6</b></td>
+<td align="center" width="12%"><b>0</b></td>
+</tr>
+</table>
+<ul class="metrics" id="metrics_foldinglist" style="padding-left: 0px;">
+<table width="100%" class="details" cellpadding="0" cellspacing="0" style="overflow:hidden;">
+<tr>
+<td style="width:40%" class="tree" align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;com.parasoft:project-with-default-package</td>
+<td align="center" width="12%">11</td>
+<td align="center" width="12%">1.545</td>
+<td align="center" width="12%">1.559</td>
+<td align="center" width="12%">6</td>
+<td align="center" width="12%">0</td>
+</tr>
+</table>
+<ul class="metrics" id="metrics_foldinglist" style="padding-left: 0px;"></ul><br></ul>
+</ul>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td></td>
+</tr>
+</table><br></div><br><a name="berr"></a><table width="100%" cellpadding="0" cellspacing="0">
+<tr>
+<td width="25%"></td>
+<td align="center">
+<div class="small_header">Setup Problems</div>
+</td>
+<td align="right" width="25%" valign="bottom"><a xmlns:textutil="textutil" xmlns:authors="authors" class="blue_link" href="#top">Back to Top </a>&nbsp;&nbsp;&nbsp;
+</td>
+</tr>
+</table><br><table xmlns:textutil="textutil" xmlns:authors="authors" width="100%" class="header_separator" cellspacing="0" cellpadding="0">
+<tr>
+<td align="center" class="header_separator"></td>
+</tr>
+</table><br xmlns:textutil="textutil" xmlns:authors="authors"><table width="100%" cellpadding="0" cellspacing="0" class="doubleborder" border="0" bordercolor="#CBCBCB">
+<tr>
+<td align="left" style="padding-left:10px" class="tree"><b>
+[WARNING]
+&nbsp;Configuration setup problems:</b></td>
+</tr>
+<tr>
+<td align="left" style="padding-top:5px;padding-bottom:5px" class="tree">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td><pre class="tree" style="margin:5px 5px 3px 5px;white-space:pre-wrap;">The JMETRICS rule category is no longer available.</pre></td>
+</tr>
+<tr>
+<td><pre class="tree" style="margin:5px 5px 3px 5px;white-space:pre-wrap;">The rule BD.PB.ARRAYINP has been renamed to BD.SECURITY.ARRAY.</pre></td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td align="left" style="padding-left:10px" class="tree"><b>
+[WARNING]
+&nbsp;Some rules in test configuration are not supported in current Jtest version</b></td>
+</tr>
+<tr>
+<td align="left" style="padding-top:5px;padding-bottom:5px" class="tree">
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td><pre class="tree" style="margin:5px 5px 3px 5px;white-space:pre-wrap;">JavaServer Pages [JSP]: All rules from category are not available</pre></td>
+</tr>
+</table>
+</td>
+</tr>
+</table><br><br></td>
+</tr>
+</table><script language="JavaScript">
+    if(document.getElementById("cs_link_cat") != null) {
+       document.getElementById("cs_link_cat").className="gray_red_link";
+    }
+    if(document.getElementById("cs_link_cattrue") != null) {
+       document.getElementById("cs_link_cattrue").className="gray_red_link";
+    }
+    </script></td>
+</tr>
+</table>
+<table style="padding-right:25px;padding-left:25px" width="100%" cellspacing="0">
+<tr>
+<td>
+<table width="100%" class="singleborder_blue" bgcolor="#FFFFFF" cellspacing="0" align="center" rules="none">
+<tr>
+<td bgcolor="#FFFFFF" align="center">
+<div class="small_header">Test Parameters</div>
+</td>
+</tr>
+<tr>
+<td>
+<table xmlns:textutil="textutil" xmlns:authors="authors" width="100%" class="header_separator" cellspacing="0" cellpadding="0">
+<tr>
+<td align="center" class="header_separator"></td>
+</tr>
+</table><br xmlns:textutil="textutil" xmlns:authors="authors"></td>
+</tr>
+<tr>
+<td style="" bgcolor="#FFFFFF" align="left">
+<table class="doubleborder" width="100%" cellpadding="2" cellspacing="0" align="center">
+<tr>
+<td class="tree" align="left">
+<div id="paramsHeader">jtestcli -data D:\github\JavaProjectTemplate\target\jtest\jtest.data.json -config dtp://DTP Recommended Rules -exclude path:D:/github/JavaProjectTemplate/src/test/java/**
+-settings D:\github\JavaProjectTemplate\localsettings.properties -report D:\github\JavaProjectTemplate\reports -fail false
+-monitor false
+</div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table><br></td>
+</tr>
+</table>
+</body>
+</html>
