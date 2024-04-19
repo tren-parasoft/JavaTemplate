@@ -1,5 +1,5 @@
 pipeline {
-
+    agent any
     environment {
         //Java17 = "c:/Progra~1/Java/jdk-17/bin/java.exe"
         //JenkinsFile = "c:/Progra~2/Jenkins/jenkins.war --version"
